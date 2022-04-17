@@ -11,7 +11,7 @@ class nurse_results extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Medical Results'),
         centerTitle: true,
-        backgroundColor: Color(0xFFEF3A25),
+        backgroundColor: Color.fromRGBO(239, 58, 37, 1),
       ),
     );
   }

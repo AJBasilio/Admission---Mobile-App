@@ -106,13 +106,13 @@ class NurseNavigationDrawer extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: const [
-            Text('Interviewer',
+            Text('Nurse',
                 style: TextStyle(
                     fontSize: 16, color: Color.fromARGB(255, 0, 0, 0))),
             SizedBox(
               height: 10,
             ),
-            Text('inter@gmail.com',
+            Text('nurse@gmail.com',
                 style: TextStyle(
                     fontSize: 16, color: Color.fromARGB(255, 0, 0, 0)))
           ],
