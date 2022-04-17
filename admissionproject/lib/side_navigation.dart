@@ -93,12 +93,11 @@ class NavigationDrawer extends StatelessWidget {
   }
 
   Widget headerWidget() {
-    const Image = 'image/logo.png';
     return Row(
       children: [
         const CircleAvatar(
           radius: 40,
-          backgroundImage: NetworkImage(Image),
+          backgroundImage: AssetImage('images/logo.png'),
         ),
         const SizedBox(
           width: 20,
