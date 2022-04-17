@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:admissionproject/side_navigation.dart';
+import 'package:admissionproject/admin/admin_sidenav.dart';
 
 void main() {
   runApp(const MaterialApp(
-    home: Home(),
+    home: admin_home(),
   ));
 }
 
-class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
+class admin_home extends StatelessWidget {
+  const admin_home({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const NavigationDrawer(),
+      drawer: const AdminNavigationDrawer(),
       appBar: AppBar(
-        title: const Text('TUPC - Admission'),
+        title: const Text('Admin Dashboard'),
         centerTitle: true,
         backgroundColor: Color(0xFFEF3A25),
       ),

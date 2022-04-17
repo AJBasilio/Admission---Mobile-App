@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:admissionproject/admin/admin_home.dart';
+import 'package:admissionproject/applicant/appli_home.dart';
+import 'package:admissionproject/interviewer/inter_home.dart';
+import 'package:admissionproject/nurse/nurse_home.dart';
 
 void main() {
   runApp(const MyApp());
