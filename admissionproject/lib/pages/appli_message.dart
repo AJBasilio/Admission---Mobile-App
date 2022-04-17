@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class People extends StatelessWidget {
-  const People({Key? key}) : super(key: key);
+class appli_message extends StatelessWidget {
+  const appli_message({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('People'),
+        title: const Text('Message'),
         centerTitle: true,
-        backgroundColor: Colors.black,
+        backgroundColor: Color(0xFFEF3A25),
       ),
     );
   }

@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
 class DrawerItem extends StatelessWidget {
-  const DrawerItem({Key? key, required this.name, required this.icon, required this.onPressed}) : super(key: key);
+  const DrawerItem(
+      {Key? key,
+      required this.name,
+      required this.icon,
+      required this.onPressed})
+      : super(key: key);
 
   final String name;
   final IconData icon;
@@ -15,9 +20,19 @@ class DrawerItem extends StatelessWidget {
         height: 40,
         child: Row(
           children: [
-            Icon(icon, size: 20, color: Colors.white,),
-            const SizedBox(width: 40,),
-            Text(name, style: const TextStyle(fontSize: 20, color: Colors.white),)
+            Icon(
+              icon,
+              size: 35,
+              color: Color.fromARGB(255, 70, 69, 69),
+            ),
+            const SizedBox(
+              width: 20,
+            ),
+            Text(
+              name,
+              style: const TextStyle(
+                  fontSize: 20, color: Color.fromARGB(255, 46, 46, 46)),
+            )
           ],
         ),
       ),

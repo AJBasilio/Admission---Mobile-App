@@ -15,35 +15,33 @@ class Home extends StatelessWidget {
     return Scaffold(
       drawer: const NavigationDrawer(),
       appBar: AppBar(
-        title: const Text('Navigation Drawer'),
+        title: const Text('TUPC - Admission'),
         centerTitle: true,
-        backgroundColor: Colors.black,
+        backgroundColor: Color(0xFFEF3A25),
       ),
-      body: Builder(
-        builder: (context) {
-          return Center(
-            child: SizedBox(
-              height: 50,
-              width: MediaQuery.of(context).size.width - 100,
-              child: ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.black,
-                ),
-                onPressed: () {
-                  Scaffold.of(context).openDrawer();
-                },
-                icon: const Icon(Icons.open_in_new, color: Colors.white),
-                label: const Text(
-                  'Open Navigation Drawer',
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-            ),
-          );
-        }
-      )
+      // body: Builder(
+      //   builder: (context) {
+      //     return Center(
+      //       child: SizedBox(
+      //         height: 50,
+      //         width: MediaQuery.of(context).size.width - 100,
+      //         child: ElevatedButton.icon(
+      //           style: ElevatedButton.styleFrom(
+      //             primary: Colors.black,
+      //           ),
+      //           onPressed: () {
+      //             Scaffold.of(context).openDrawer();
+      //           },
+      //           icon: const Icon(Icons.open_in_new, color: Colors.white),
+      //           label: const Text(
+      //             'Open Navigation Drawer',
+      //             style: TextStyle(color: Colors.white),
+      //           ),
+      //         ),
+      //       ),
+      //     );
+      //   }
+      // )
     );
   }
 }
-
-
