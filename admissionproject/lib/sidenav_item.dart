@@ -23,7 +23,7 @@ class DrawerItem extends StatelessWidget {
             Icon(
               icon,
               size: 30,
-              color: Color.fromARGB(255, 70, 69, 69),
+              color: const Color.fromARGB(255, 70, 69, 69),
             ),
             const SizedBox(
               width: 20,
