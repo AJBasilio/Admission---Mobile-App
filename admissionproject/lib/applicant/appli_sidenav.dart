@@ -13,7 +13,7 @@ class AppliNavigationDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: Material(
-        color: Color.fromARGB(255, 255, 255, 255),
+        color: const Color.fromARGB(255, 255, 255, 255),
         child: Padding(
           padding: const EdgeInsets.fromLTRB(24.0, 90, 24, 0),
           child: Column(
@@ -84,19 +84,19 @@ class AppliNavigationDrawer extends StatelessWidget {
     switch (index) {
       case 0:
         Navigator.push(context,
-            MaterialPageRoute(builder: (context) => const appli_home()));
+            MaterialPageRoute(builder: (context) => const AppliHome()));
         break;
       case 1:
         Navigator.push(context,
-            MaterialPageRoute(builder: (context) => const appli_results()));
+            MaterialPageRoute(builder: (context) => const AppliResults()));
         break;
       case 2:
         Navigator.push(context,
-            MaterialPageRoute(builder: (context) => const appli_pdf()));
+            MaterialPageRoute(builder: (context) => const AppliPdf()));
         break;
       case 3:
         Navigator.push(context,
-            MaterialPageRoute(builder: (context) => const appli_message()));
+            MaterialPageRoute(builder: (context) => const AppliMessage()));
         break;
       case 4:
         Navigator.push(

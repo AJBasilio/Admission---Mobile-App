@@ -12,7 +12,7 @@ class NurseNavigationDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: Material(
-        color: Color.fromARGB(255, 255, 255, 255),
+        color: const Color.fromARGB(255, 255, 255, 255),
         child: Padding(
           padding: const EdgeInsets.fromLTRB(24.0, 90, 24, 0),
           child: Column(
@@ -76,15 +76,15 @@ class NurseNavigationDrawer extends StatelessWidget {
     switch (index) {
       case 0:
         Navigator.push(context,
-            MaterialPageRoute(builder: (context) => const nurse_home()));
+            MaterialPageRoute(builder: (context) => const NurseHome()));
         break;
       case 1:
         Navigator.push(context,
-            MaterialPageRoute(builder: (context) => const nurse_results()));
+            MaterialPageRoute(builder: (context) => const NurseResults()));
         break;
       case 2:
         Navigator.push(context,
-            MaterialPageRoute(builder: (context) => const nurse_message()));
+            MaterialPageRoute(builder: (context) => const NurseMessage()));
         break;
       case 3:
         Navigator.push(

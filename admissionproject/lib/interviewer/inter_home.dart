@@ -3,12 +3,12 @@ import 'package:admissionproject/interviewer/inter_sidenav.dart';
 
 void main() {
   runApp(const MaterialApp(
-    home: inter_home(),
+    home: InterHome(),
   ));
 }
 
-class inter_home extends StatelessWidget {
-  const inter_home({Key? key}) : super(key: key);
+class InterHome extends StatelessWidget {
+  const InterHome({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class inter_home extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Interviewer Dashboard'),
         centerTitle: true,
-        backgroundColor: Color(0xFFEF3A25),
+        backgroundColor: const Color(0xFFEF3A25),
       ),
       // body: Builder(
       //   builder: (context) {

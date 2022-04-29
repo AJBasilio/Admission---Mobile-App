@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:admissionproject/nurse/nurse_sidenav.dart';
 
-class nurse_message extends StatelessWidget {
-  const nurse_message({Key? key}) : super(key: key);
+class NurseMessage extends StatelessWidget {
+  const NurseMessage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class nurse_message extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Message'),
         centerTitle: true,
-        backgroundColor: Color(0xFFEF3A25),
+        backgroundColor:const Color(0xFFEF3A25),
       ),
     );
   }

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:admissionproject/applicant/appli_sidenav.dart';
 
-class appli_results extends StatelessWidget {
-  const appli_results({Key? key}) : super(key: key);
+class AppliResults extends StatelessWidget {
+  const AppliResults({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class appli_results extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Application Results'),
         centerTitle: true,
-        backgroundColor: Color(0xFFEF3A25),
+        backgroundColor: const Color(0xFFEF3A25),
       ),
     );
   }

@@ -3,12 +3,12 @@ import 'package:admissionproject/applicant/appli_sidenav.dart';
 
 void main() {
   runApp(const MaterialApp(
-    home: appli_home(),
+    home: AppliHome(),
   ));
 }
 
-class appli_home extends StatelessWidget {
-  const appli_home({Key? key}) : super(key: key);
+class AppliHome extends StatelessWidget {
+  const AppliHome({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class appli_home extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Applicant Dashboard'),
         centerTitle: true,
-        backgroundColor: Color(0xFFEF3A25),
+        backgroundColor: const Color(0xFFEF3A25),
       ),
       // body: Builder(
       //   builder: (context) {

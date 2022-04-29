@@ -3,12 +3,12 @@ import 'package:admissionproject/admin/admin_sidenav.dart';
 
 void main() {
   runApp(const MaterialApp(
-    home: admin_home(),
+    home: AdminHome(),
   ));
 }
 
-class admin_home extends StatelessWidget {
-  const admin_home({Key? key}) : super(key: key);
+class AdminHome extends StatelessWidget {
+  const AdminHome({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class admin_home extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Admin Dashboard'),
         centerTitle: true,
-        backgroundColor: Color(0xFFEF3A25),
+        backgroundColor:const Color(0xFFEF3A25),
       ),
       // body: Builder(
       //   builder: (context) {

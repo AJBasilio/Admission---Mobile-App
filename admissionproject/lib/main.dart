@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:admissionproject/admin/admin_home.dart';
-import 'package:admissionproject/applicant/appli_home.dart';
-import 'package:admissionproject/interviewer/inter_home.dart';
-import 'package:admissionproject/nurse/nurse_home.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -28,7 +26,8 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.green,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      debugShowCheckedModeBanner: false,
+      home: Container(),
     );
   }
 }
@@ -112,7 +111,7 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.of(context).push(MaterialPageRoute(
-              builder: (BuildContext context) => admin_home()));
+              builder: (BuildContext context) => const AdminHome()));
         },
         tooltip: 'Increment',
         child: const Icon(Icons.add),
@@ -120,3 +119,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+

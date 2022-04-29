@@ -12,7 +12,7 @@ class InterNavigationDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: Material(
-        color: Color.fromARGB(255, 255, 255, 255),
+        color:const  Color.fromARGB(255, 255, 255, 255),
         child: Padding(
           padding: const EdgeInsets.fromLTRB(24.0, 90, 24, 0),
           child: Column(
@@ -76,15 +76,15 @@ class InterNavigationDrawer extends StatelessWidget {
     switch (index) {
       case 0:
         Navigator.push(context,
-            MaterialPageRoute(builder: (context) => const inter_home()));
+            MaterialPageRoute(builder: (context) => const InterHome()));
         break;
       case 1:
         Navigator.push(context,
-            MaterialPageRoute(builder: (context) => const inter_results()));
+            MaterialPageRoute(builder: (context) => const InterResults()));
         break;
       case 2:
         Navigator.push(context,
-            MaterialPageRoute(builder: (context) => const inter_message()));
+            MaterialPageRoute(builder: (context) => const InterMessage()));
         break;
       case 3:
         Navigator.push(

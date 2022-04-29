@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:admissionproject/admin/admin_sidenav.dart';
 
-class admin_applireqs extends StatelessWidget {
-  const admin_applireqs({Key? key}) : super(key: key);
+class AdminApplireqs extends StatelessWidget {
+  const AdminApplireqs({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class admin_applireqs extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Applicant Requirements'),
         centerTitle: true,
-        backgroundColor: Color(0xFFEF3A25),
+        backgroundColor: const Color(0xFFEF3A25),
       ),
     );
   }

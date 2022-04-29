@@ -3,12 +3,12 @@ import 'package:admissionproject/nurse/nurse_sidenav.dart';
 
 void main() {
   runApp(const MaterialApp(
-    home: nurse_home(),
+    home: NurseHome(),
   ));
 }
 
-class nurse_home extends StatelessWidget {
-  const nurse_home({Key? key}) : super(key: key);
+class NurseHome extends StatelessWidget {
+  const NurseHome({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class nurse_home extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Nurse Dashboard'),
         centerTitle: true,
-        backgroundColor: Color(0xFFEF3A25),
+        backgroundColor:const Color(0xFFEF3A25),
       ),
       // body: Builder(
       //   builder: (context) {

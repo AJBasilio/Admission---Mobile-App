@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:admissionproject/admin/admin_sidenav.dart';
 
-class admin_examsched extends StatelessWidget {
-  const admin_examsched({Key? key}) : super(key: key);
+class AdminExamsched extends StatelessWidget {
+  const AdminExamsched({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class admin_examsched extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Applicant Exam Schedule'),
         centerTitle: true,
-        backgroundColor: Color(0xFFEF3A25),
+        backgroundColor: const Color(0xFFEF3A25),
       ),
     );
   }
