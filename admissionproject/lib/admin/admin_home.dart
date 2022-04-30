@@ -1,10 +1,15 @@
 import 'package:admissionproject/dashboard/components/my_fields.dart';
+import 'package:admissionproject/main.dart';
 import 'package:flutter/material.dart';
 
-import '../../constants.dart';
+import 'package:admissionproject/constants.dart';
 import 'package:admissionproject/dashboard/components/header.dart';
 
 import 'package:admissionproject/dashboard/components/OverallDetails.dart';
+
+void main() {
+  runApp(MyApp());
+}
 
 class DashboardScreen extends StatelessWidget {
   @override

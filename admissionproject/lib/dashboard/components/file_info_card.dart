@@ -56,13 +56,13 @@ class FileInfoCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "${info.numOfFiles} Applicants",
+                info.numOfFiles!,
                 style: Theme.of(context)
                     .textTheme
                     .bodyText1,
               ),
               Text(
-                info.totalStorage!,
+                "${info.totalStorage} Applicants",
                 style: Theme.of(context)
                     .textTheme
                     .bodyText1,
