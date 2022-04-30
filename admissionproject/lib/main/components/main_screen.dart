@@ -1,5 +1,5 @@
 import 'package:admissionproject/controllers/MenuController.dart';
-import 'package:admissionproject/admin/admin_applireqs.dart';
+import 'package:admissionproject/admin/admin_home.dart';
 import 'package:flutter/material.dart';
 
 import 'components/side_menu.dart';
