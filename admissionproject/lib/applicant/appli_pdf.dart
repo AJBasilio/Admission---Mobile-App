@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:admissionproject/applicant/appli_sidenav.dart';
 
 class AppliPdf extends StatefulWidget {
   const AppliPdf({Key? key}) : super(key: key);
@@ -12,7 +11,6 @@ class _AppliPdfState extends State<AppliPdf> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const AppliNavigationDrawer(),
       appBar: AppBar(
         title: const Text('Print PDF'),
         centerTitle: true,
