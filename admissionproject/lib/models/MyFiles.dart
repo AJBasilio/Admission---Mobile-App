@@ -1,4 +1,3 @@
-import 'package:admissionproject/constants.dart';
 import 'package:flutter/material.dart';
 
 class CloudStorageInfo {
@@ -20,33 +19,33 @@ List demoMyFiles = [
   CloudStorageInfo(
     title: "Passed Status",
     numOfFiles: "",
-    svgSrc: "assets/icons/google_drive.svg",
+    svgSrc: "assets/icons/PassedStatus.svg",
     totalStorage: 1328,
-    color: primaryColor,
+    color: Colors.green,
     percentage: 35,
   ),
   CloudStorageInfo(
     title: "Ongoing Status",
     numOfFiles: "",
-    svgSrc: "assets/icons/pdf_file.svg",
+    svgSrc: "assets/icons/PendingStatus.svg",
     totalStorage: 1328,
-    color: const Color(0xFFFFA113),
+    color: Colors.yellow,
     percentage: 35,
   ),
   CloudStorageInfo(
     title: "Failed Status",
     numOfFiles: "",
-    svgSrc: "assets/icons/one_drive.svg",
+    svgSrc: "assets/icons/FailedStatus.svg",
     totalStorage: 1328,
-    color: const Color(0xFFA4CDFF),
+    color: Colors.red,
     percentage: 10,
   ),
   CloudStorageInfo(
     title: "Total Number of Applicants",
     numOfFiles: "",
-    svgSrc: "assets/icons/drop_box.svg",
+    svgSrc: "assets/icons/TotalApplicants.svg",
     totalStorage: 1328,
-    color: const Color(0xFF007EE5),
+    color: Colors.grey,
     percentage: 78,
   ),
 ];

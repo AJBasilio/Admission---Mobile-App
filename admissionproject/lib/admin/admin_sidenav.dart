@@ -18,7 +18,7 @@ class AdminNavigationDrawer extends StatelessWidget {
           padding: const EdgeInsets.fromLTRB(24.0, 90, 24, 0),
           child: Column(
             children: [
-              headerWidget(),
+              //headerWidget(),
               const SizedBox(
                 height: 40,
               ),
@@ -81,29 +81,29 @@ class AdminNavigationDrawer extends StatelessWidget {
   void onItemPressed(BuildContext context, {required int index}) {
     Navigator.pop(context);
 
-    switch (index) {
-      case 0:
-        Navigator.push(context,
-            MaterialPageRoute(builder: (context) => DashboardScreen()));
-        break;
-      case 1:
-        Navigator.push(context,
-            MaterialPageRoute(builder: (context) => const AdminExamsched()));
-        break;
-      case 2:
-        Navigator.push(context,
-            MaterialPageRoute(builder: (context) => const AdminApplireqs()));
-        break;
-      case 3:
-        Navigator.push(context,
-            MaterialPageRoute(builder: (context) => const AdminMessage()));
-        break;
-      case 4:
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => MyApp()));
-        break;
-    }
-  }
+  //   switch (index) {
+  //     case 0:
+  //       Navigator.push(context,
+  //           MaterialPageRoute(builder: (context) => DashboardScreen()));
+  //       break;
+  //     case 1:
+  //       Navigator.push(context,
+  //           MaterialPageRoute(builder: (context) => const AdminExamsched()));
+  //       break;
+  //     case 2:
+  //       Navigator.push(context,
+  //           MaterialPageRoute(builder: (context) => const AdminApplireqs()));
+  //       break;
+  //     case 3:
+  //       Navigator.push(context,
+  //           MaterialPageRoute(builder: (context) => const AdminMessage()));
+  //       break;
+  //     case 4:
+  //       Navigator.push(
+  //           context, MaterialPageRoute(builder: (context) => MyApp()));
+  //       break;
+  //   }
+  // }
 
   Widget headerWidget() {
     return Row(
@@ -132,4 +132,5 @@ class AdminNavigationDrawer extends StatelessWidget {
       ],
     );
   }
+}
 }

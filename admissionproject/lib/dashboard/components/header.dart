@@ -1,3 +1,4 @@
+import 'package:admissionproject/widgets/background-image.dart';
 import 'package:flutter/material.dart';
 
 import '../../pallete.dart';

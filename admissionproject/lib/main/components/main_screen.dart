@@ -1,7 +1,6 @@
 import 'package:admissionproject/controllers/MenuController.dart';
-import 'package:admissionproject/dashboard/dashboard_screen.dart';
+import 'package:admissionproject/admin/admin_applireqs.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 import 'components/side_menu.dart';
 
