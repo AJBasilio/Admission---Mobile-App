@@ -24,7 +24,7 @@ class PasswordInput extends StatelessWidget {
         height: size.height * 0.08,
         width: size.width * 0.8,
         decoration: BoxDecoration(
-          color: const Color(0xFFc23616).withOpacity(0.5),
+          color: Color.fromARGB(255, 255, 255, 255).withOpacity(0.5),
           borderRadius: BorderRadius.circular(16),
         ),
         child: Center(
@@ -40,7 +40,10 @@ class PasswordInput extends StatelessWidget {
                 ),
               ),
               hintText: hint,
-              hintStyle: kBodyText,
+              hintStyle: TextStyle(
+                  fontSize: 22,
+                  color: Color.fromARGB(158, 0, 0, 0),
+                  height: 1.5),
             ),
             obscureText: true,
             style: kBodyText,

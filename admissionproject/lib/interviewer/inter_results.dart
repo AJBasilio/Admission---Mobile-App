@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:admissionproject/interviewer/inter_sidenav.dart';
 
 class InterResults extends StatelessWidget {
   const InterResults({Key? key}) : super(key: key);
@@ -7,7 +6,6 @@ class InterResults extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const InterNavigationDrawer(),
       appBar: AppBar(
         title: const Text('Interview Results'),
         centerTitle: true,

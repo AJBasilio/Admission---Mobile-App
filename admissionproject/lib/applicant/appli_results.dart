@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:admissionproject/applicant/appli_sidenav.dart';
+
 
 class AppliResults extends StatefulWidget {
   const AppliResults({Key? key}) : super(key: key);
@@ -17,7 +17,7 @@ class _AppliResultsState extends State<AppliResults> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const AppliNavigationDrawer(),
+
       appBar: AppBar(
         title: const Text('Application Results'),
         centerTitle: true,

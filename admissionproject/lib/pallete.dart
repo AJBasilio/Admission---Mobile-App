@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 const TextStyle kBodyText =
-    TextStyle(fontSize: 22, color: Colors.white, height: 1.5);
+    TextStyle(fontSize: 15, color: Color.fromARGB(255, 0, 0, 0), height: 1.5);
 
-const Color kWhite = Colors.white;
-const Color kBlue = Color(0xff5663ff);
+const Color kWhite = const Color(0xFFEF3A25);
+const Color kBlue = Colors.blue;

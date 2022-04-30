@@ -38,7 +38,7 @@ class NurseNavigationDrawer extends StatelessWidget {
                 height: 30,
               ),
               DrawerItem(
-                  name: 'View Results',
+                  name: 'Results',
                   icon: Icons.view_list,
                   onPressed: () => onItemPressed(context, index: 1)),
               const SizedBox(

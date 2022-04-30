@@ -123,7 +123,9 @@ class AppliNavigationDrawer extends StatelessWidget {
       children: [
         const CircleAvatar(
           radius: 40,
-          backgroundImage: AssetImage('assets/images/logo.png'),
+          backgroundImage: AssetImage(
+            'assets/images/logo.png',
+          ),
         ),
         const SizedBox(
           width: 20,

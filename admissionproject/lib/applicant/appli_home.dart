@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:admissionproject/applicant/appli_sidenav.dart';
+
 
 void main() {
   runApp(const MaterialApp(
@@ -17,14 +17,14 @@ class AppliHome extends StatefulWidget {
 class _AppliHomeState extends State<AppliHome> {
   @override
   Widget build(BuildContext context) => Scaffold(
-        drawer: const AppliNavigationDrawer(),
+
         appBar: AppBar(
           title: const Text('Applicant Dashboard'),
           centerTitle: true,
           backgroundColor: const Color(0xFFEF3A25),
         ),
         body: ListView(
-          padding: EdgeInsets.all(13),
+          padding: const EdgeInsets.all(13),
           children: [
             ApplicantInfo(),
             ExamScore(),
