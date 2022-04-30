@@ -9,14 +9,15 @@ class LoginScreen extends StatelessWidget {
     return Stack(
       children: [
         Scaffold(
-          backgroundColor: const Color(0xFF707070),
+          backgroundColor: Color.fromARGB(255, 226, 226, 226),
           body: Column(
             children: [
               const Flexible(
                 child: Center(
                   child: CircleAvatar(
-                  radius: 75,
-                  backgroundImage: AssetImage('assets/images/logo.png'),
+                    radius: 75,
+                    backgroundImage: AssetImage('assets/images/logo.png'),
+                    backgroundColor: Color.fromARGB(255, 226, 225, 225),
                   ),
                 ),
               ),
@@ -24,8 +25,8 @@ class LoginScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   const TextInputField(
-                    icon: FontAwesomeIcons.envelope,
-                    hint: 'Email',
+                    icon: FontAwesomeIcons.userLarge,
+                    hint: 'User ID',
                     inputType: TextInputType.emailAddress,
                     inputAction: TextInputAction.next,
                   ),
@@ -34,18 +35,18 @@ class LoginScreen extends StatelessWidget {
                     hint: 'Password',
                     inputAction: TextInputAction.done,
                   ),
-                  GestureDetector(
-                    onTap: () => Navigator.pushNamed(context, 'ForgotPassword'),
-                    child: const Text(
-                      'Forgot Password',
-                      style: kBodyText,
-                    ),
-                  ),
+                  // GestureDetector(
+                  //   onTap: () => Navigator.pushNamed(context, 'ForgotPassword'),
+                  //   child: const Text(
+                  //     'Forgot Password?',
+                  //     style: kBodyText,
+                  //   ),
+                  // ),
                   const SizedBox(
                     height: 25,
                   ),
                   const RoundedButton(
-                    buttonName: 'Login',
+                    buttonName: 'Sign In',
                   ),
                   const SizedBox(
                     height: 25,
@@ -54,19 +55,26 @@ class LoginScreen extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () => Navigator.pushNamed(context, 'CreateNewAccount'),
-                child: Container(
-                  child: const Text(
-                    'Create New Account',
-                    style: kBodyText,
+                child:
+                    Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  const Text(
+                    "Don't have an account yet?",
+                    style: TextStyle(
+                        fontSize: 15,
+                        color: Color.fromARGB(199, 0, 0, 0),
+                        height: 1.5),
                   ),
-                  decoration: const BoxDecoration(
-                      border:
-                          Border(bottom: BorderSide(width: 1, color: kWhite))),
-                ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  const Text(
+                    'Create New Account',
+                    style: TextStyle(
+                        fontSize: 15, color: Colors.blue, height: 1.5),
+                  ),
+                ]),
               ),
-              const SizedBox(
-                height: 20,
-              ),
+              const SizedBox(height: 50),
             ],
           ),
         )

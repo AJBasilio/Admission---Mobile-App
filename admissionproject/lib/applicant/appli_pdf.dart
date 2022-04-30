@@ -18,7 +18,7 @@ class _AppliPdfState extends State<AppliPdf> {
         centerTitle: true,
         backgroundColor: const Color(0xFFEF3A25),
       ),
-      body: ListView(padding: EdgeInsets.all(13), children: <Widget>[
+      body: ListView(padding: const EdgeInsets.all(13), children: <Widget>[
         Card(
           shadowColor: const Color(0xFFEF3A25),
           elevation: 12,
@@ -27,17 +27,17 @@ class _AppliPdfState extends State<AppliPdf> {
             borderRadius: BorderRadius.circular(20),
           ),
           child: Container(
-            padding: EdgeInsets.fromLTRB(4, 16, 4, 16),
+            padding: const EdgeInsets.fromLTRB(4, 16, 4, 16),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                ListTile(
+                const ListTile(
                   leading: Icon(
                     Icons.picture_as_pdf,
-                    color: const Color(0xFFEF3A25),
+                    color: Color(0xFFEF3A25),
                     size: 50,
                   ),
-                  title: const Text(
+                  title: Text(
                     'PRE-ADMISSION CHECKLIST',
                     style: TextStyle(
                       color: Colors.black,
@@ -47,10 +47,10 @@ class _AppliPdfState extends State<AppliPdf> {
                     ),
                   ),
                 ),
-                Divider(
-                    height: 25.0, thickness: 1, color: const Color(0xFFEF3A25)),
+                const Divider(
+                    height: 25.0, thickness: 1, color: Color(0xFFEF3A25)),
                 Padding(
-                  padding: EdgeInsets.fromLTRB(30, 10, 2, 10),
+                  padding: const EdgeInsets.fromLTRB(30, 10, 2, 10),
                   child: ButtonBar(
                     alignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
