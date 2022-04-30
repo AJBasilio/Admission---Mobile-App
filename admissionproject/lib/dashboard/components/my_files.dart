@@ -24,13 +24,13 @@ class MyFiles extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(height: defaultPadding),
+        const SizedBox(height: defaultPadding),
         Responsive(
           mobile: FileInfoCardGridView(
             crossAxisCount: _size.width < 650 ? 2 : 4,
             childAspectRatio: _size.width < 650 ? 1.3 : 1,
           ),
-          tablet: FileInfoCardGridView(),
+          tablet: const FileInfoCardGridView(),
           desktop: FileInfoCardGridView(
             childAspectRatio: _size.width < 1400 ? 1.1 : 1.4,
           ),
@@ -53,7 +53,7 @@ class FileInfoCardGridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
-      physics: NeverScrollableScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
       shrinkWrap: true,
       itemCount: demoMyFiles.length,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(

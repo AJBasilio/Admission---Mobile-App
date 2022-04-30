@@ -1,4 +1,4 @@
-import 'package:admissionproject/screens/dashboard/components/my_fields.dart';
+import 'package:admissionproject/dashboard/components/my_fields.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants.dart';
@@ -11,18 +11,18 @@ class DashboardScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: SingleChildScrollView(
-        padding: EdgeInsets.all(defaultPadding),
+        padding: const EdgeInsets.all(defaultPadding),
         child: Column(
           children: [
-            Header(),
-            SizedBox(height: defaultPadding),
+            const Header(),
+            const SizedBox(height: defaultPadding),
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Expanded(
                   flex: 5,
                   child: Column(
-                    children: [
+                    children: const [
                       MyFiles(),
                         SizedBox(height: defaultPadding),
                         StorageDetails(),

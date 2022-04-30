@@ -1,7 +1,7 @@
 import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:admissionproject/constants.dart';
 import 'package:admissionproject/controllers/MenuController.dart';
-import 'package:admissionproject/screens/main/main_screen.dart';
+import 'main/components/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';

@@ -11,7 +11,7 @@ class Header extends StatelessWidget {
       children: [
           Text(
             "Admin Dashboard",
-            style: Theme.of(context).textTheme.headline6,
+            style: Theme.of(context).textTheme.headline5,
           ),
       ],
     );

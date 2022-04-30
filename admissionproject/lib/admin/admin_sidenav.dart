@@ -84,7 +84,7 @@ class AdminNavigationDrawer extends StatelessWidget {
     switch (index) {
       case 0:
         Navigator.push(context,
-            MaterialPageRoute(builder: (context) => const AdminHome()));
+            MaterialPageRoute(builder: (context) => DashboardScreen()));
         break;
       case 1:
         Navigator.push(context,
