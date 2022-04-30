@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 void main() {
   runApp(const MaterialApp(
     home: AppliHome(),
@@ -17,7 +16,6 @@ class AppliHome extends StatefulWidget {
 class _AppliHomeState extends State<AppliHome> {
   @override
   Widget build(BuildContext context) => Scaffold(
-
         appBar: AppBar(
           title: const Text('Applicant Dashboard'),
           centerTitle: true,
@@ -38,7 +36,7 @@ class _AppliHomeState extends State<AppliHome> {
   // ignore: non_constant_identifier_names
   Widget ApplicantInfo() => Card(
         shadowColor: const Color(0xFFEF3A25),
-        elevation: 12,
+        elevation: 3,
         clipBehavior: Clip.antiAlias,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
@@ -129,7 +127,7 @@ class _AppliHomeState extends State<AppliHome> {
   // ignore: non_constant_identifier_names
   Widget ExamScore() => Card(
         shadowColor: const Color(0xFFEF3A25),
-        elevation: 12,
+        elevation: 5,
         clipBehavior: Clip.antiAlias,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
@@ -181,7 +179,7 @@ class _AppliHomeState extends State<AppliHome> {
   // ignore: non_constant_identifier_names
   Widget InterStatus() => Card(
         shadowColor: const Color(0xFFEF3A25),
-        elevation: 12,
+        elevation: 5,
         clipBehavior: Clip.antiAlias,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
@@ -229,7 +227,7 @@ class _AppliHomeState extends State<AppliHome> {
   // ignore: non_constant_identifier_names
   Widget MedicalStatus() => Card(
         shadowColor: const Color(0xFFEF3A25),
-        elevation: 12,
+        elevation: 5,
         clipBehavior: Clip.antiAlias,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
@@ -277,7 +275,7 @@ class _AppliHomeState extends State<AppliHome> {
   // ignore: non_constant_identifier_names
   Widget AppliStatus() => Card(
         shadowColor: const Color(0xFFEF3A25),
-        elevation: 12,
+        elevation: 5,
         clipBehavior: Clip.antiAlias,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),

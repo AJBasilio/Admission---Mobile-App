@@ -91,7 +91,7 @@ class CreateNewAccount extends StatelessWidget {
                     const TextInputField(
                       icon: FontAwesomeIcons.mobileScreen,
                       hint: 'Mobile Number',
-                      inputType: TextInputType.number,
+                      inputType: TextInputType.phone,
                       inputAction: TextInputAction.next,
                     ),
                     const TextInputField(

@@ -11,7 +11,14 @@ void main() {
   runApp(MyApp());
 }
 
-class DashboardScreen extends StatelessWidget {
+class DashboardScreen extends StatefulWidget {
+  const DashboardScreen({Key? key}) : super(key: key);
+
+  @override
+  State<DashboardScreen> createState() => _DashboardScreenState();
+}
+
+class _DashboardScreenState extends State<DashboardScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -29,8 +36,8 @@ class DashboardScreen extends StatelessWidget {
                   child: Column(
                     children: const [
                       MyFiles(),
-                        SizedBox(height: defaultPadding),
-                        StorageDetails(),
+                      SizedBox(height: defaultPadding),
+                      StorageDetails(),
                     ],
                   ),
                 ),
