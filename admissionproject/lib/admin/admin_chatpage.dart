@@ -13,9 +13,9 @@ class ChatPage extends StatefulWidget {
 
 class _ChatPageState extends State<ChatPage> {
   List<ChatUsers> chatUsers = [
-   ChatUsers(name: "TUP_admin", messageText: "Awesome Setup", imageURL: "assets/images/logo.png", time: "Now"),
-   ChatUsers(name: "TUP_nurse", messageText: "That's Great", imageURL: "assets/images/logo.png", time: "Yesterday"),
-   ChatUsers(name: "TUP_interviewer", messageText: "Hey where are you?", imageURL: "assets/images/logo.png", time: "31 Mar"),
+   ChatUsers(name: "TUP_admin", messageText: "This is sample message", imageURL: "assets/images/logo.png", time: "Now"),
+   ChatUsers(name: "TUP_nurse", messageText: "This is sample message", imageURL: "assets/images/logo.png", time: "Yesterday"),
+   ChatUsers(name: "TUP_interviewer", messageText: "This is samok=le message", imageURL: "assets/images/logo.png", time: "31 Mar"),
     
   ];
   @override
