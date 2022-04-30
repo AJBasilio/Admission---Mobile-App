@@ -4,6 +4,7 @@ import 'package:admissionproject/applicant/appli_home.dart';
 import 'package:admissionproject/applicant/appli_results.dart';
 import 'package:admissionproject/applicant/appli_pdf.dart';
 import 'package:admissionproject/applicant/appli_message.dart';
+import 'package:admissionproject/applicant/appli_upload.dart';
 import 'package:admissionproject/main.dart';
 
 class AppliNavigationDrawer extends StatelessWidget {
@@ -28,7 +29,7 @@ class AppliNavigationDrawer extends StatelessWidget {
                 color: Color.fromARGB(255, 151, 151, 151),
               ),
               const SizedBox(
-                height: 30,
+                height: 20,
               ),
               DrawerItem(
                 name: 'Home',
@@ -36,26 +37,34 @@ class AppliNavigationDrawer extends StatelessWidget {
                 onPressed: () => onItemPressed(context, index: 0),
               ),
               const SizedBox(
+                height: 20,
+              ),
+              DrawerItem(
+                name: 'Upload Documents',
+                icon: Icons.upload_file,
+                onPressed: () => onItemPressed(context, index: 1),
+              ),
+              const SizedBox(
                 height: 30,
               ),
               DrawerItem(
                   name: 'View Results',
                   icon: Icons.view_list,
-                  onPressed: () => onItemPressed(context, index: 1)),
+                  onPressed: () => onItemPressed(context, index: 2)),
               const SizedBox(
                 height: 30,
               ),
               DrawerItem(
                   name: 'Print PDF',
                   icon: Icons.description,
-                  onPressed: () => onItemPressed(context, index: 2)),
+                  onPressed: () => onItemPressed(context, index: 3)),
               const SizedBox(
                 height: 30,
               ),
               DrawerItem(
                   name: 'Message',
                   icon: Icons.message_outlined,
-                  onPressed: () => onItemPressed(context, index: 3)),
+                  onPressed: () => onItemPressed(context, index: 4)),
               const SizedBox(
                 height: 30,
               ),
@@ -70,7 +79,7 @@ class AppliNavigationDrawer extends StatelessWidget {
               DrawerItem(
                   name: 'Log out',
                   icon: Icons.logout,
-                  onPressed: () => onItemPressed(context, index: 4)),
+                  onPressed: () => onItemPressed(context, index: 5)),
             ],
           ),
         ),
@@ -88,17 +97,21 @@ class AppliNavigationDrawer extends StatelessWidget {
         break;
       case 1:
         Navigator.push(context,
-            MaterialPageRoute(builder: (context) => const AppliResults()));
+            MaterialPageRoute(builder: (context) => const AppliUpload()));
         break;
       case 2:
         Navigator.push(context,
-            MaterialPageRoute(builder: (context) => const AppliPdf()));
+            MaterialPageRoute(builder: (context) => const AppliResults()));
         break;
       case 3:
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => const AppliPdf()));
+        break;
+      case 4:
         Navigator.push(context,
             MaterialPageRoute(builder: (context) => const AppliMessage()));
         break;
-      case 4:
+      case 5:
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => const MyApp()));
         break;
