@@ -9,6 +9,7 @@ class AppliResults extends StatefulWidget {
 }
 
 class _AppliResultsState extends State<AppliResults> {
+  // ignore: non_constant_identifier_names
   final Images = [
     'assets/images/exampassers.jpg',
     'assets/images/exampassers2.jpg',

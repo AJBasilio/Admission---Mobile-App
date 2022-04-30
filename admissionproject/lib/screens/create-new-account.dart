@@ -11,7 +11,7 @@ class CreateNewAccount extends StatelessWidget {
     return Stack(
       children: [
         Scaffold(
-          backgroundColor: Color.fromARGB(255, 226, 225, 225),
+          backgroundColor: const Color.fromARGB(255, 226, 225, 225),
           body: SingleChildScrollView(
             child: Column(
               children: [
@@ -24,10 +24,10 @@ class CreateNewAccount extends StatelessWidget {
                         child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Text("USER REGISTRATION",
-                            style: TextStyle(
+                        const Text("USER REGISTRATION",
+                            style: const TextStyle(
                               fontSize: 25,
-                              color: Color.fromARGB(255, 31, 31, 31),
+                              color: const Color.fromARGB(255, 31, 31, 31),
                               height: 1.5,
                               letterSpacing: 4,
                               fontWeight: FontWeight.bold,

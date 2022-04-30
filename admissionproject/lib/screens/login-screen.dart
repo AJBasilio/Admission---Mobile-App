@@ -9,7 +9,7 @@ class LoginScreen extends StatelessWidget {
     return Stack(
       children: [
         Scaffold(
-          backgroundColor: Color.fromARGB(255, 226, 226, 226),
+          backgroundColor: const Color.fromARGB(255, 226, 226, 226),
           body: Column(
             children: [
               const Flexible(
@@ -64,7 +64,7 @@ class LoginScreen extends StatelessWidget {
                         color: Color.fromARGB(199, 0, 0, 0),
                         height: 1.5),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   const Text(

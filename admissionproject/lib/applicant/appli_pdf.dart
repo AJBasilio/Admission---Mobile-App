@@ -58,9 +58,10 @@ class _AppliPdfState extends State<AppliPdf> {
                           ),
                           onPressed: () {},
                           child: Row(
+                            // ignore: prefer_const_literals_to_create_immutables
                             children: [
                               const Icon(Icons.file_download),
-                              SizedBox(
+                              const SizedBox(
                                 width: 15,
                               ),
                               const Text('Click Here to Download PDF'),

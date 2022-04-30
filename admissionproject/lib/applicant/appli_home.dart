@@ -35,6 +35,7 @@ class _AppliHomeState extends State<AppliHome> {
         ),
       );
 
+  // ignore: non_constant_identifier_names
   Widget ApplicantInfo() => Card(
         shadowColor: const Color(0xFFEF3A25),
         elevation: 12,
@@ -43,14 +44,14 @@ class _AppliHomeState extends State<AppliHome> {
           borderRadius: BorderRadius.circular(20),
         ),
         child: Container(
-          padding: EdgeInsets.fromLTRB(4, 16, 4, 16),
+          padding: const EdgeInsets.fromLTRB(4, 16, 4, 16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               ListTile(
-                leading: Icon(
+                leading: const Icon(
                   Icons.account_circle,
-                  color: const Color(0xFFEF3A25),
+                  color: Color(0xFFEF3A25),
                   size: 50,
                 ),
                 title: const Text(
@@ -67,14 +68,14 @@ class _AppliHomeState extends State<AppliHome> {
                   style: TextStyle(color: Colors.black.withOpacity(0.7)),
                 ),
               ),
-              Divider(
-                  height: 25.0, thickness: 1, color: const Color(0xFFEF3A25)),
+              const Divider(
+                  height: 25.0, thickness: 1, color: Color(0xFFEF3A25)),
               Padding(
-                  padding: EdgeInsets.fromLTRB(30, 10, 2, 10),
+                  padding: const EdgeInsets.fromLTRB(30, 10, 2, 10),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
+                    children: const [
                       Text('Name : Juan Dela Cruz',
                           style: TextStyle(
                             color: Colors.black,
@@ -125,6 +126,7 @@ class _AppliHomeState extends State<AppliHome> {
         ),
       );
 
+  // ignore: non_constant_identifier_names
   Widget ExamScore() => Card(
         shadowColor: const Color(0xFFEF3A25),
         elevation: 12,
@@ -133,11 +135,11 @@ class _AppliHomeState extends State<AppliHome> {
           borderRadius: BorderRadius.circular(20),
         ),
         child: Container(
-          padding: EdgeInsets.fromLTRB(4, 16, 4, 16),
+          padding: const EdgeInsets.fromLTRB(4, 16, 4, 16),
           child: Column(
             children: [
               ListTile(
-                leading: Icon(
+                leading: const Icon(
                   Icons.check_circle,
                   color: Colors.green,
                   size: 50,
@@ -156,8 +158,8 @@ class _AppliHomeState extends State<AppliHome> {
                   style: TextStyle(color: Colors.black.withOpacity(0.7)),
                 ),
               ),
-              Divider(
-                  height: 10.0, thickness: 1, color: const Color(0xFFEF3A25)),
+              const Divider(
+                  height: 10.0, thickness: 1, color: Color(0xFFEF3A25)),
               Padding(
                 padding: const EdgeInsets.all(5.0),
                 child: Text(
@@ -176,6 +178,7 @@ class _AppliHomeState extends State<AppliHome> {
         ),
       );
 
+  // ignore: non_constant_identifier_names
   Widget InterStatus() => Card(
         shadowColor: const Color(0xFFEF3A25),
         elevation: 12,
@@ -184,16 +187,16 @@ class _AppliHomeState extends State<AppliHome> {
           borderRadius: BorderRadius.circular(20),
         ),
         child: Container(
-          padding: EdgeInsets.fromLTRB(4, 16, 4, 16),
+          padding: const EdgeInsets.fromLTRB(4, 16, 4, 16),
           child: Column(
             children: [
-              ListTile(
+              const ListTile(
                 leading: Icon(
                   Icons.check_circle,
                   color: Colors.green,
                   size: 50,
                 ),
-                title: const Text(
+                title: Text(
                   'Interview Status',
                   style: TextStyle(
                     color: Colors.black,
@@ -203,8 +206,8 @@ class _AppliHomeState extends State<AppliHome> {
                   ),
                 ),
               ),
-              Divider(
-                  height: 10.0, thickness: 1, color: const Color(0xFFEF3A25)),
+              const Divider(
+                  height: 10.0, thickness: 1, color: Color(0xFFEF3A25)),
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
@@ -223,6 +226,7 @@ class _AppliHomeState extends State<AppliHome> {
         ),
       );
 
+  // ignore: non_constant_identifier_names
   Widget MedicalStatus() => Card(
         shadowColor: const Color(0xFFEF3A25),
         elevation: 12,
@@ -231,16 +235,16 @@ class _AppliHomeState extends State<AppliHome> {
           borderRadius: BorderRadius.circular(20),
         ),
         child: Container(
-          padding: EdgeInsets.fromLTRB(4, 16, 4, 16),
+          padding: const EdgeInsets.fromLTRB(4, 16, 4, 16),
           child: Column(
             children: [
-              ListTile(
+              const ListTile(
                 leading: Icon(
                   Icons.highlight_off,
                   color: Colors.red,
                   size: 50,
                 ),
-                title: const Text(
+                title: Text(
                   'Medical Status',
                   style: TextStyle(
                     color: Colors.black,
@@ -250,8 +254,8 @@ class _AppliHomeState extends State<AppliHome> {
                   ),
                 ),
               ),
-              Divider(
-                  height: 10.0, thickness: 1, color: const Color(0xFFEF3A25)),
+              const Divider(
+                  height: 10.0, thickness: 1, color: Color(0xFFEF3A25)),
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
@@ -270,6 +274,7 @@ class _AppliHomeState extends State<AppliHome> {
         ),
       );
 
+  // ignore: non_constant_identifier_names
   Widget AppliStatus() => Card(
         shadowColor: const Color(0xFFEF3A25),
         elevation: 12,
@@ -278,16 +283,16 @@ class _AppliHomeState extends State<AppliHome> {
           borderRadius: BorderRadius.circular(20),
         ),
         child: Container(
-          padding: EdgeInsets.fromLTRB(4, 16, 4, 16),
+          padding: const EdgeInsets.fromLTRB(4, 16, 4, 16),
           child: Column(
             children: [
-              ListTile(
+              const ListTile(
                 leading: Icon(
                   Icons.help_outline,
                   color: Colors.orange,
                   size: 50,
                 ),
-                title: const Text(
+                title: Text(
                   'Application Status',
                   style: TextStyle(
                     color: Colors.black,
@@ -297,8 +302,8 @@ class _AppliHomeState extends State<AppliHome> {
                   ),
                 ),
               ),
-              Divider(
-                  height: 10.0, thickness: 1, color: const Color(0xFFEF3A25)),
+              const Divider(
+                  height: 10.0, thickness: 1, color: Color(0xFFEF3A25)),
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text(

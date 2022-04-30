@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:admissionproject/admin/admin_chatpage.dart';
+import 'package:admissionproject/admin/admin_home.dart';
 
 void main() => runApp(const MyApp());
 
@@ -61,7 +61,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         centerTitle: true,
         backgroundColor: Colors.red,
       ),
-      body: const ChatPage(),
+      body: DashboardScreen(),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
