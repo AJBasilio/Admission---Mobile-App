@@ -53,17 +53,13 @@ class _AppliHomeState extends State<AppliHome> {
                   size: 50,
                 ),
                 title: const Text(
-                  'WELCOME APPLICANT',
+                  "Applicant's Information",
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 21,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 1.5,
                   ),
-                ),
-                subtitle: Text(
-                  "Applicant's Information",
-                  style: TextStyle(color: Colors.black.withOpacity(0.7)),
                 ),
               ),
               const Divider(
