@@ -6,11 +6,12 @@ import 'package:admissionproject/dashboard/components/header.dart';
 
 import '../dashboard/components/TableLayout.dart';
 
+
 void main() {
   runApp(MyApp());
 }
 
-class DashboardScreen extends StatelessWidget {
+class DashboardScreens extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
