@@ -1,9 +1,9 @@
+import 'package:admissionproject/users/admin/admin_applireqs.dart';
+import 'package:admissionproject/users/admin/admin_examsched.dart';
+import 'package:admissionproject/users/admin/admin_home.dart';
+import 'package:admissionproject/users/applicant/appli_chatpage.dart';
 import 'package:flutter/material.dart';
 import 'package:admissionproject/main.dart';
-import 'package:admissionproject/admin/admin_applireqs.dart';
-import 'package:admissionproject/admin/admin_chatpage.dart';
-import 'package:admissionproject/admin/admin_examsched.dart';
-import 'package:admissionproject/admin/admin_home.dart';
 
 void main() {
   runApp(MyApp());
@@ -60,11 +60,11 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.view_list),
-            label: 'Results',
+            icon: Icon(Icons.fact_check),
+            label: 'Requirements',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.archive),
+            icon: Icon(Icons.today),
             label: 'Schedule',
           ),
           BottomNavigationBarItem(

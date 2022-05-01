@@ -1,6 +1,6 @@
-import 'package:admissionproject/main/components/main_screen.dart';
+import 'package:admissionproject/screens/main_screen.dart';
 import 'package:flutter/material.dart';
-import '../pallete.dart';
+import '../models/designs/pallete.dart';
 
 class RoundedButton extends StatelessWidget {
   const RoundedButton({

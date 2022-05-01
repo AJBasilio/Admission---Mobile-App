@@ -1,9 +1,9 @@
 import 'package:adaptive_theme/adaptive_theme.dart';
-import 'package:admissionproject/constants.dart';
-import 'package:admissionproject/controllers/MenuController.dart';
+import 'package:admissionproject/models/designs/constants.dart';
 import 'package:admissionproject/screens/create-new-account.dart';
 import 'package:admissionproject/screens/forgot-password.dart';
 import 'package:admissionproject/screens/login-screen.dart';
+import 'package:admissionproject/screens/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

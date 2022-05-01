@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../pallete.dart';
+import '../models/designs/pallete.dart';
 
 class TextInputField extends StatelessWidget {
   const TextInputField({

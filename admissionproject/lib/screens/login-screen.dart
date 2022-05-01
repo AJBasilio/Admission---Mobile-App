@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import '../pallete.dart';
+import '../models/designs/pallete.dart';
 import '../widgets/widgets.dart';
 
 class LoginScreen extends StatelessWidget {

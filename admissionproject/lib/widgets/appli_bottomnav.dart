@@ -1,9 +1,9 @@
+import 'package:admissionproject/users/applicant/appli_chatpage.dart';
+import 'package:admissionproject/users/applicant/appli_home.dart';
+import 'package:admissionproject/users/applicant/appli_pdf.dart';
+import 'package:admissionproject/users/applicant/appli_results.dart';
+import 'package:admissionproject/users/applicant/appli_upload.dart';
 import 'package:flutter/material.dart';
-import 'package:admissionproject/applicant/appli_chatpage.dart';
-import 'package:admissionproject/applicant/appli_home.dart';
-import 'package:admissionproject/applicant/appli_pdf.dart';
-import 'package:admissionproject/applicant/appli_results.dart';
-import 'package:admissionproject/applicant/appli_upload.dart';
 
 void main() => runApp(const MyApp());
 
@@ -67,7 +67,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             label: 'PDF',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.archive),
+            icon: Icon(Icons.drive_folder_upload),
             label: 'Documents',
           ),
           BottomNavigationBarItem(
