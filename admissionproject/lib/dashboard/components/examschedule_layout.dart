@@ -1,11 +1,12 @@
-import 'package:admissionproject/models/TableItem.dart';
+import 'package:admissionproject/models/ExamSchedItem.dart';
+import 'package:admissionproject/widgets/button_layout.dart';
 import 'package:data_table_2/data_table_2.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
 
-class RecentFiles extends StatelessWidget {
-  const RecentFiles({
+class ExaminationSchedule extends StatelessWidget {
+  const ExaminationSchedule({
     Key? key,
   }) : super(key: key);
 
@@ -13,15 +14,26 @@ class RecentFiles extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(defaultPadding),
-      decoration: BoxDecoration(
-        color: Theme.of(context).canvasColor,
-        borderRadius: const BorderRadius.all(Radius.circular(10)),
-      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: const [
+              ButtonLayout(
+                buttonName: 'Copy',
+              ),
+              ButtonLayout(
+                buttonName: 'Excel',
+              ),
+              ButtonLayout(
+                buttonName: 'PDF',
+              ),
+            ],
+          ),
+          const SizedBox(height: 50),
           Text(
-            "Applicant Requirements",
+            "Examination Schedule",
             style: Theme.of(context).textTheme.subtitle1,
           ),
           SizedBox(
@@ -41,8 +53,8 @@ class RecentFiles extends StatelessWidget {
                 ),
               ],
               rows: List.generate(
-                demoRecentFiles.length,
-                (index) => recentFileDataRow(demoRecentFiles[index]),
+                examscheditem.length,
+                (index) => recentFileDataRow(examscheditem[index]),
               ),
             ),
           ),
@@ -52,7 +64,7 @@ class RecentFiles extends StatelessWidget {
   }
 }
 
-DataRow recentFileDataRow(RecentFile fileInfo) {
+DataRow recentFileDataRow(ExamSched fileInfo) {
   return DataRow(
     cells: [
       DataCell(Text(fileInfo.name!)),

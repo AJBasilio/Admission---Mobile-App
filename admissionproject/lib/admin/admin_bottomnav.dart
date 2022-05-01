@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:admissionproject/main.dart';
 import 'package:admissionproject/admin/admin_applireqs.dart';
 import 'package:admissionproject/admin/admin_chatpage.dart';
 import 'package:admissionproject/admin/admin_examsched.dart';
 import 'package:admissionproject/admin/admin_home.dart';
 
-void main() => runApp(const MyApp());
+void main() {
+  runApp(MyApp());
+}
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class AdminBottomnav extends StatelessWidget {
+  const AdminBottomnav({Key? key}) : super(key: key);
 
   static const String _title = 'Flutter Code Sample';
 
@@ -32,6 +35,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const _pages = <Widget>[
+    AdminHome(),
+    AdminAppliReqs(),
     AdminExamsched(),
     ChatPage(),
   ];
@@ -60,7 +65,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.archive),
-            label: 'Documents',
+            label: 'Schedule',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.message),

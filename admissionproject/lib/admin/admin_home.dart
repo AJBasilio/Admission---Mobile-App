@@ -11,14 +11,14 @@ void main() {
   runApp(MyApp());
 }
 
-class DashboardScreen extends StatefulWidget {
-  const DashboardScreen({Key? key}) : super(key: key);
+class AdminHome extends StatefulWidget {
+  const AdminHome({Key? key}) : super(key: key);
 
   @override
-  State<DashboardScreen> createState() => _DashboardScreenState();
+  State<AdminHome> createState() => _AdminHomeState();
 }
 
-class _DashboardScreenState extends State<DashboardScreen> {
+class _AdminHomeState extends State<AdminHome> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(

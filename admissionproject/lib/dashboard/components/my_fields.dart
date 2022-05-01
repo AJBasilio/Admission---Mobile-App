@@ -37,7 +37,7 @@ class MyFiles extends StatelessWidget {
                 AdaptiveTheme.of(context).toggleThemeMode();
               },
               icon: const Icon(Icons.ac_unit_sharp),
-              label: const Text("Change Theme"),
+              label: const Text(""),
                 ),
               ],
             ),

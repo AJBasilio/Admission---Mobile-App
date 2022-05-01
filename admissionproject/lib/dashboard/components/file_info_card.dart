@@ -40,7 +40,6 @@ class FileInfoCard extends StatelessWidget {
                   color: info.color,
                 ),
               ),
-              Icon(Icons.more_vert, color: Theme.of(context).backgroundColor)
             ],
           ),
           Text(

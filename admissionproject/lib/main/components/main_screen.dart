@@ -1,5 +1,5 @@
 import 'package:admissionproject/controllers/MenuController.dart';
-import 'package:admissionproject/admin/admin_home.dart';
+import 'package:admissionproject/admin/admin_bottomnav.dart';
 import 'package:flutter/material.dart';
 
 import 'components/side_menu.dart';
@@ -12,10 +12,10 @@ class MainScreen extends StatelessWidget {
       body: SafeArea(
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
+          children: const [
             Expanded(
               flex: 5,
-              child: DashboardScreen(),
+              child: AdminBottomnav(),
             ),
           ],
         ),

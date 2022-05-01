@@ -4,13 +4,20 @@ import 'package:flutter/material.dart';
 import 'package:admissionproject/constants.dart';
 import 'package:admissionproject/dashboard/components/header.dart';
 
-import '../dashboard/components/TableLayout.dart';
+import '../dashboard/components/requirements_layout.dart';
 
 void main() {
   runApp(MyApp());
 }
 
-class DashboardScreen extends StatelessWidget {
+class AdminAppliReqs extends StatefulWidget {
+  const AdminAppliReqs({Key? key}) : super(key: key);
+
+  @override
+  State<AdminAppliReqs> createState() => _AdminAppliReqsState();
+}
+
+class _AdminAppliReqsState extends State<AdminAppliReqs> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -28,7 +35,7 @@ class DashboardScreen extends StatelessWidget {
                   child: Column(
                     children: const [
                       SizedBox(height: defaultPadding),
-                      RecentFiles(),
+                      ApplicantRequirements(),
                     ],
                   ),
                 ),

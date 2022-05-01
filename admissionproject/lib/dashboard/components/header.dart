@@ -1,3 +1,4 @@
+import 'package:admissionproject/screens/login-screen.dart';
 import 'package:admissionproject/widgets/background-image.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,8 @@ class Header extends StatelessWidget {
       children: [
           IconButton(
             onPressed: () {
-              Navigator.pop(context);
+              Navigator.push(
+              context, MaterialPageRoute(builder: (context) => LoginScreen()));
             },
             icon: const Icon(
             Icons.arrow_back_ios,
