@@ -32,6 +32,11 @@ class _ChatPageState extends State<ChatPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Messages'),
+        centerTitle: true,
+        backgroundColor: Color.fromARGB(255, 195, 29, 57),
+      ),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child: Column(

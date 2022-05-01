@@ -14,7 +14,7 @@ class _AppliPdfState extends State<AppliPdf> {
       appBar: AppBar(
         title: const Text('Print PDF'),
         centerTitle: true,
-        backgroundColor: const Color(0xFFEF3A25),
+        backgroundColor: const Color.fromARGB(255, 195, 29, 57),
       ),
       body: ListView(padding: const EdgeInsets.all(13), children: <Widget>[
         Card(

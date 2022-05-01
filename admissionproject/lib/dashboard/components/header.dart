@@ -11,23 +11,32 @@ class Header extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-          IconButton(
-            onPressed: () {
-              Navigator.push(
-              context, MaterialPageRoute(builder: (context) => LoginScreen()));
-            },
-            icon: const Icon(
-            Icons.arrow_back_ios,
-            color: kBlue,
-              ),
-            ),
-          Text(
-            "Admin Dashboard",
-            style: Theme.of(context).textTheme.headline5,
-          ),
-      ],
-    );
+    return MaterialApp(
+        home: Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: Image.asset('assets/images/logo.png', height: 50, width: 50),
+        centerTitle: true,
+        backgroundColor: const Color(0xffEF3A25),
+        elevation: 0.0,
+      ),
+
+      // children: [
+      //     IconButton(
+      //       onPressed: () {
+      //         Navigator.push(
+      //         context, MaterialPageRoute(builder: (context) => LoginScreen()));
+      //       },
+      //       icon: const Icon(
+      //       Icons.arrow_back_ios,
+      //       color: kBlue,
+      //         ),
+      //       ),
+      //     Text(
+      //       "Admin Dashboard",
+      //       style: Theme.of(context).textTheme.headline5,
+      //     ),
+      // ],
+    ));
   }
 }

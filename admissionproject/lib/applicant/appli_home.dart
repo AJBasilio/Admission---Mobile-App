@@ -19,7 +19,7 @@ class _AppliHomeState extends State<AppliHome> {
         appBar: AppBar(
           title: const Text('Applicant Dashboard'),
           centerTitle: true,
-          backgroundColor: const Color(0xFFEF3A25),
+          backgroundColor: const Color.fromARGB(255, 195, 29, 57),
         ),
         body: ListView(
           padding: const EdgeInsets.all(13),
@@ -35,7 +35,7 @@ class _AppliHomeState extends State<AppliHome> {
 
   // ignore: non_constant_identifier_names
   Widget ApplicantInfo() => Card(
-        shadowColor: const Color(0xFFEF3A25),
+        shadowColor: const Color.fromARGB(255, 195, 29, 57),
         elevation: 3,
         clipBehavior: Clip.antiAlias,
         shape: RoundedRectangleBorder(

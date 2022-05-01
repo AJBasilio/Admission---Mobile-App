@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class AppliResults extends StatefulWidget {
   const AppliResults({Key? key}) : super(key: key);
 
@@ -18,11 +17,10 @@ class _AppliResultsState extends State<AppliResults> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       appBar: AppBar(
         title: const Text('Application Results'),
         centerTitle: true,
-        backgroundColor: const Color(0xFFEF3A25),
+        backgroundColor: const Color.fromARGB(255, 195, 29, 57),
       ),
     );
   }

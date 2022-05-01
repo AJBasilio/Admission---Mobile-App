@@ -33,7 +33,7 @@ class _ChatPageState extends State<ChatPage> {
       appBar: AppBar(
         title: const Text('Messages'),
         centerTitle: true,
-        backgroundColor: const Color(0xFFEF3A25),
+        backgroundColor: const Color.fromARGB(255, 195, 29, 57),
       ),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),

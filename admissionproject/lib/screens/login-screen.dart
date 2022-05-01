@@ -35,13 +35,6 @@ class LoginScreen extends StatelessWidget {
                     hint: 'Password',
                     inputAction: TextInputAction.done,
                   ),
-                  // GestureDetector(
-                  //   onTap: () => Navigator.pushNamed(context, 'ForgotPassword'),
-                  //   child: const Text(
-                  //     'Forgot Password?',
-                  //     style: kBodyText,
-                  //   ),
-                  // ),
                   const SizedBox(
                     height: 25,
                   ),
