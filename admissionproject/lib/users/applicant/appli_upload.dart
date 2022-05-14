@@ -31,14 +31,14 @@ class _AppliUploadState extends State<AppliUpload> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
-              Text(
+              const Text(
                 'Upload necessary pictures of documents',
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Container(
@@ -46,11 +46,11 @@ class _AppliUploadState extends State<AppliUpload> {
                 width: double.infinity,
                 color: Colors.grey.withOpacity(0.2),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              Text('Click below to add photos'),
-              SizedBox(
+              const Text('Click below to add photos'),
+              const SizedBox(
                 height: 15,
               ),
               Expanded(
@@ -60,8 +60,9 @@ class _AppliUploadState extends State<AppliUpload> {
                   },
                   child: GridView.builder(
                       itemCount: images!.isEmpty ? 3 : images!.length,
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 3),
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 3),
                       itemBuilder: (context, index) => Container(
                           decoration: BoxDecoration(
                               color: Colors.white,
@@ -87,11 +88,11 @@ class _AppliUploadState extends State<AppliUpload> {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(140, 2, 140, 2),
                     child: MaterialButton(
-                      padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                      padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                       color: Colors.grey,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
+                        children: const [
                           Text(
                             "Remove All",
                             style: TextStyle(color: Colors.white, fontSize: 15),
@@ -103,15 +104,15 @@ class _AppliUploadState extends State<AppliUpload> {
                       },
                     ),
                   ),
-                  SizedBox(height: 2),
+                  const SizedBox(height: 2),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(140, 2, 140, 2),
                     child: MaterialButton(
-                      padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                      color: Color.fromARGB(255, 195, 29, 57),
+                      padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                      color: const Color.fromARGB(255, 195, 29, 57),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
+                        children: const [
                           Text(
                             "Submit",
                             style: TextStyle(color: Colors.white, fontSize: 15),
