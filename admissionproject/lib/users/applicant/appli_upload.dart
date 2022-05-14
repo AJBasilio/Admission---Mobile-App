@@ -59,7 +59,7 @@ class _AppliUploadState extends State<AppliUpload> {
                     getMultiImages();
                   },
                   child: GridView.builder(
-                      itemCount: images!.isEmpty ? 1 : images!.length,
+                      itemCount: images!.isEmpty ? 3 : images!.length,
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 3),
                       itemBuilder: (context, index) => Container(
@@ -81,23 +81,46 @@ class _AppliUploadState extends State<AppliUpload> {
                 ),
               ),
               const SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  MaterialButton(
-                    padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                    color: Color.fromARGB(255, 195, 29, 57),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "Submit",
-                          style: TextStyle(color: Colors.white, fontSize: 15),
-                        ),
-                      ],
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(140, 2, 140, 2),
+                    child: MaterialButton(
+                      padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                      color: Colors.grey,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Remove All",
+                            style: TextStyle(color: Colors.white, fontSize: 15),
+                          ),
+                        ],
+                      ),
+                      onPressed: () {
+                        removeMultiImages();
+                      },
                     ),
-                    onPressed: () {},
-                  )
+                  ),
+                  SizedBox(height: 2),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(140, 2, 140, 2),
+                    child: MaterialButton(
+                      padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                      color: Color.fromARGB(255, 195, 29, 57),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Submit",
+                            style: TextStyle(color: Colors.white, fontSize: 15),
+                          ),
+                        ],
+                      ),
+                      onPressed: () {},
+                    ),
+                  ),
                 ],
               )
             ],
@@ -115,6 +138,12 @@ class _AppliUploadState extends State<AppliUpload> {
       } else {
         print('No Images Selected ');
       }
+    });
+  }
+
+  Future removeMultiImages() async {
+    setState(() {
+      images!.clear();
     });
   }
 }
