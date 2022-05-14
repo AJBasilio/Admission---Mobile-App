@@ -1,11 +1,5 @@
 import 'package:adaptive_theme/adaptive_theme.dart';
-<<<<<<< Updated upstream
 import 'package:admissionproject/models/designs/constants.dart';
-=======
-import 'package:admissionproject/constants.dart';
-import 'package:admissionproject/controllers/MenuController.dart';
-import 'package:admissionproject/main/components/main_screen.dart';
->>>>>>> Stashed changes
 import 'package:admissionproject/screens/create-new-account.dart';
 import 'package:admissionproject/screens/forgot-password.dart';
 import 'package:admissionproject/screens/login-screen.dart';

@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class AppliUpload extends StatefulWidget {
   const AppliUpload({Key? key}) : super(key: key);
@@ -11,143 +11,111 @@ class AppliUpload extends StatefulWidget {
 }
 
 class _AppliUploadState extends State<AppliUpload> {
-  File? image;
+  File? singleImage;
 
-  Future getImage(ImageSource source) async {
-    try {
-      final image = await ImagePicker().pickImage(source: source);
-      if (image == null) return;
-
-      final imageTemporary = File(image.path);
-      setState(() {
-        this.image = imageTemporary;
-      });
-    } on PlatformException catch (e) {
-      print('Failed to pick image: $e');
-    }
-  }
+  final singlePicker = ImagePicker();
+  final multiPicker = ImagePicker();
+  List<XFile>? images = [];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('Upload Documents'),
-          centerTitle: true,
-          backgroundColor: const Color.fromARGB(255, 195, 29, 57),
-        ),
-        body: SingleChildScrollView(
-          padding: EdgeInsets.fromLTRB(20, 15, 20, 20),
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: const Text('Upload Documents'),
+        centerTitle: true,
+        backgroundColor: const Color.fromARGB(255, 195, 29, 57),
+      ),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'Upload Scanned Grades',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
-                ],
+              SizedBox(
+                height: 5,
+              ),
+              Text(
+                'Upload necessary pictures of documents',
+                style: TextStyle(fontWeight: FontWeight.bold),
               ),
               SizedBox(
                 height: 10,
               ),
-              Card(
-                color: Color.fromARGB(255, 226, 225, 225),
-                elevation: 5,
-                child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      image != null
-                          ? Image.file(image!, fit: BoxFit.cover)
-                          : Icon(
-                              Icons.cloud_upload_outlined,
-                              color: Color.fromARGB(255, 97, 95, 96),
-                              size: 220,
-                            ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(10, 8, 10, 28),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            MaterialButton(
-                              padding: EdgeInsets.all(20),
-                              color: Color.fromARGB(255, 255, 255, 255),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    Icons.collections,
-                                    color: Color.fromARGB(255, 0, 0, 0),
-                                    size: 30,
-                                  ),
-                                  SizedBox(width: 10),
-                                  Text(
-                                    "Gallery",
-                                    style: TextStyle(
-                                        fontSize: 20,
-                                        color: Color.fromARGB(255, 0, 0, 0)),
-                                  ),
-                                ],
-                              ),
-                              onPressed: () {
-                                getImage(ImageSource.gallery);
-                              },
-                            ),
-                            SizedBox(width: 40),
-                            MaterialButton(
-                              padding: EdgeInsets.all(20),
-                              color: Color.fromARGB(255, 255, 255, 255),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    Icons.add_a_photo,
-                                    color: Color.fromARGB(255, 0, 0, 0),
-                                    size: 30,
-                                  ),
-                                  SizedBox(width: 10),
-                                  Text(
-                                    "Camera",
-                                    style: TextStyle(
-                                        color: Color.fromARGB(255, 0, 0, 0),
-                                        fontSize: 20),
-                                  ),
-                                ],
-                              ),
-                              onPressed: () {
-                                getImage(ImageSource.camera);
-                              },
-                            ),
-                          ],
-                        ),
-                      )
-                    ]),
+              Container(
+                height: 1,
+                width: double.infinity,
+                color: Colors.grey.withOpacity(0.2),
               ),
-              SizedBox(height: 3),
-              MaterialButton(
-                padding: EdgeInsets.fromLTRB(30, 20, 30, 20),
-                color: Color(0xFFEF3A25),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "SUBMIT",
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
-                          color: Colors.white),
-                    ),
-                  ],
+              SizedBox(
+                height: 10,
+              ),
+              Text('Click below to add photos'),
+              SizedBox(
+                height: 15,
+              ),
+              Expanded(
+                child: InkWell(
+                  onTap: () {
+                    getMultiImages();
+                  },
+                  child: GridView.builder(
+                      itemCount: images!.isEmpty ? 1 : images!.length,
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 3),
+                      itemBuilder: (context, index) => Container(
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              border: Border.all(
+                                  color: const Color.fromARGB(255, 195, 29, 57)
+                                      .withOpacity(0.5))),
+                          child: images!.isEmpty
+                              ? Icon(
+                                  CupertinoIcons.camera,
+                                  color: const Color.fromARGB(255, 195, 29, 57)
+                                      .withOpacity(0.5),
+                                )
+                              : Image.file(
+                                  File(images![index].path),
+                                  fit: BoxFit.cover,
+                                ))),
                 ),
-                onPressed: () {
-                  "";
-                },
               ),
+              const SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  MaterialButton(
+                    padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                    color: Color.fromARGB(255, 195, 29, 57),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Submit",
+                          style: TextStyle(color: Colors.white, fontSize: 15),
+                        ),
+                      ],
+                    ),
+                    onPressed: () {},
+                  )
+                ],
+              )
             ],
           ),
-        ));
+        ),
+      ),
+    );
+  }
+
+  Future getMultiImages() async {
+    final List<XFile>? selectedImages = await multiPicker.pickMultiImage();
+    setState(() {
+      if (selectedImages!.isNotEmpty) {
+        images!.addAll(selectedImages);
+      } else {
+        print('No Images Selected ');
+      }
+    });
   }
 }
