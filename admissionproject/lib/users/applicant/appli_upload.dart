@@ -13,7 +13,6 @@ class AppliUpload extends StatefulWidget {
 class _AppliUploadState extends State<AppliUpload> {
   File? singleImage;
 
-  final singlePicker = ImagePicker();
   final multiPicker = ImagePicker();
   List<XFile>? images = [];
 
