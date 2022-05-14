@@ -1,6 +1,5 @@
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AppliUpload extends StatefulWidget {
@@ -11,7 +10,6 @@ class AppliUpload extends StatefulWidget {
 }
 
 class _AppliUploadState extends State<AppliUpload> {
-  File? singleImage;
 
   final multiPicker = ImagePicker();
   List<XFile>? images = [];
@@ -49,36 +47,39 @@ class _AppliUploadState extends State<AppliUpload> {
               const SizedBox(
                 height: 10,
               ),
-              const Text('Click below to add photos'),
+              const Text('Click the box to add media'),
               const SizedBox(
                 height: 15,
               ),
               Expanded(
-                child: InkWell(
-                  onTap: () {
-                    getMultiImages();
-                  },
-                  child: GridView.builder(
-                      itemCount: images!.isEmpty ? 3 : images!.length,
-                      gridDelegate:
-                          const SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisCount: 3),
-                      itemBuilder: (context, index) => Container(
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              border: Border.all(
-                                  color: const Color.fromARGB(255, 195, 29, 57)
-                                      .withOpacity(0.5))),
-                          child: images!.isEmpty
-                              ? Icon(
-                                  CupertinoIcons.camera,
-                                  color: const Color.fromARGB(255, 195, 29, 57)
-                                      .withOpacity(0.5),
-                                )
-                              : Image.file(
-                                  File(images![index].path),
-                                  fit: BoxFit.cover,
-                                ))),
+                child: Container(
+                  color: Colors.grey.shade300,
+                  child: InkWell(
+                    onTap: () {
+                      getMultiImages();
+                    },
+                    child: GridView.builder(
+                        itemCount: images!.isEmpty ? 1 : images!.length,
+                        gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 3),
+                        itemBuilder: (context, index) => Container(
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                border: Border.all(
+                                    color: const Color.fromARGB(255, 195, 29, 57)
+                                        .withOpacity(0.5))),
+                            child: images!.isEmpty
+                                ? Icon(
+                                    Icons.collections,
+                                    color: const Color.fromARGB(255, 195, 29, 57)
+                                        .withOpacity(0.5),
+                                  )
+                                : Image.file(
+                                    File(images![index].path),
+                                    fit: BoxFit.cover,
+                                  ))),
+                  ),
                 ),
               ),
               const SizedBox(height: 10),
