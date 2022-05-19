@@ -74,7 +74,8 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
             borderRadius: BorderRadius.circular(20),
             color: (messages[index].messageType  == "receiver"?Colors.grey.shade200:Colors.red[200]),
           ),
-                child: Text(messages[index].messageContent),
+              padding: EdgeInsets.all(16),
+              child: Text(messages[index].messageContent, style: TextStyle(fontSize: 15),),
               ),),);
             },
           ),
