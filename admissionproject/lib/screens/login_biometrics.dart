@@ -70,7 +70,7 @@ class LoginScreen extends StatelessWidget {
                   Text(
                     'Create New Account',
                     style: TextStyle(
-                        fontSize: 15, color: Colors.blue, height: 1.5),
+                        color: Colors.blue, height: 1.5),
                   ),
                 ]),
               ),
@@ -83,8 +83,8 @@ class LoginScreen extends StatelessWidget {
     );
   }
   Widget buildAuthenticate(BuildContext context) => buildButton(
-        text: 'Sign In with Fingerprint',
-        icon: Icons.lock_open,
+        text: '',
+        icon: Icons.fingerprint_rounded,
         onClicked: () async {
           final isAuthenticated = await LocalAuthApi.authenticate();
 
@@ -101,14 +101,16 @@ class LoginScreen extends StatelessWidget {
     required IconData icon,
     required VoidCallback onClicked,
   }) =>
-      ElevatedButton.icon(
-        style: ElevatedButton.styleFrom(
+      TextButton.icon(
+        style: TextButton.styleFrom(
           padding: const EdgeInsets.symmetric(horizontal: 42, vertical: 15),
+          primary: const Color.fromARGB(199, 0, 0, 0),
+          
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(18),
           ),
         ),
-        icon: Icon(icon, size: 26),
+        icon: Icon(icon, size: 40),
         label: Text(
           text,
           style: const TextStyle(fontSize: 20),
