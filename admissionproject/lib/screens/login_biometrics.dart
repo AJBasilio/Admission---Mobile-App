@@ -23,7 +23,6 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
               Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   const TextInputField(
                     icon: FontAwesomeIcons.userLarge,
@@ -110,7 +109,7 @@ class LoginScreen extends StatelessWidget {
             borderRadius: BorderRadius.circular(18),
           ),
         ),
-        icon: Icon(icon, size: 40),
+        icon: Icon(icon, size: 40, color: const Color(0xFFEF3A25),),
         label: Text(
           text,
           style: const TextStyle(fontSize: 20),
