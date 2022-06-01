@@ -43,6 +43,7 @@ dependencies:
   data_table_2: ^2.2.1
   image_picker: ^0.8.1
   local_auth: ^1.1.11
+  url_launcher: ^6.1.2
   
 
 dev_dependencies:

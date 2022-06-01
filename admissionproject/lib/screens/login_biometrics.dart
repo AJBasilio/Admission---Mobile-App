@@ -3,8 +3,10 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../widgets/widgets.dart';
 import 'package:admissionproject/api/local_auth_api.dart';
 import 'package:admissionproject/users/applicant/appli_home.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class LoginScreen extends StatelessWidget {
+  final String _phoneNumber = '+639152135706';
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -24,6 +26,10 @@ class LoginScreen extends StatelessWidget {
               ),
               Column(
                 children: [
+                  buildAuthenticate(context),
+                  const SizedBox(
+                    height: 10,
+                  ),
                   const TextInputField(
                     icon: FontAwesomeIcons.userLarge,
                     hint: 'User ID',
@@ -45,11 +51,7 @@ class LoginScreen extends StatelessWidget {
                   const SizedBox(
                     height: 10,
                   ),
-                  buildAuthenticate(context),
-                  const SizedBox(
-                    height: 25,
-                  ),
-
+                
                 ],
               ),
               GestureDetector(
@@ -73,12 +75,46 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ]),
               ),
-              const SizedBox(height: 50),
-              
+              const SizedBox(height: 15),
+              const Text(
+                    "For Inquiries: Call or Text us",
+                    style: TextStyle(
+                        fontSize: 15,
+                        color: Color.fromARGB(199, 0, 0, 0),
+                        height: 1.5),
+                  ),
+                  const SizedBox(height: 10),
+                 Row(mainAxisAlignment: MainAxisAlignment.center, children:[
+                  IconButton(
+                    icon: const Icon(Icons.phone),
+                    color: Colors.red,
+                    onPressed:()async{
+                      final _call = 'tel:$_phoneNumber'; 
+                      if (await canLaunch(_call)){
+                        await launch (_call);
+                      }
+                    },
+                  ),
+                  const SizedBox(
+                    width: 12,
+                  ),
+                  IconButton(
+                    icon: const Icon(Icons.mail),
+                    color: Colors.red,
+                    onPressed:()async{
+                      final _call = 'sms:$_phoneNumber'; 
+                      if (await canLaunch(_call)){
+                        await launch (_call);
+                      }
+                    },
+                  ),
+                 ]
+                 ),
+                 const SizedBox(height: 20)
             ],
-          ),
-        )
-      ],
+        ),
+    ),
+      ]
     );
   }
   Widget buildAuthenticate(BuildContext context) => buildButton(
@@ -116,4 +152,6 @@ class LoginScreen extends StatelessWidget {
         ),
         onPressed: onClicked,
       );
+
 }
+
