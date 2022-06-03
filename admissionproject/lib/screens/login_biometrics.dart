@@ -6,7 +6,7 @@ import 'package:admissionproject/users/applicant/appli_home.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class LoginScreen extends StatelessWidget {
-  final String _phoneNumber = '+639152135706';
+  final String _url = '+639152135706';
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -26,10 +26,6 @@ class LoginScreen extends StatelessWidget {
               ),
               Column(
                 children: [
-                  buildAuthenticate(context),
-                  const SizedBox(
-                    height: 10,
-                  ),
                   const TextInputField(
                     icon: FontAwesomeIcons.userLarge,
                     hint: 'User ID',
@@ -48,6 +44,10 @@ class LoginScreen extends StatelessWidget {
                   const RoundedButton(
                     buttonName: 'Sign In',
                   ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  buildAuthenticate(context),
                   const SizedBox(
                     height: 10,
                   ),
@@ -89,7 +89,7 @@ class LoginScreen extends StatelessWidget {
                     icon: const Icon(Icons.phone),
                     color: Colors.red,
                     onPressed:()async{
-                      final _call = 'tel:$_phoneNumber'; 
+                      final _call = 'tel:$_url'; 
                       if (await canLaunch(_call)){
                         await launch (_call);
                       }
@@ -99,10 +99,10 @@ class LoginScreen extends StatelessWidget {
                     width: 12,
                   ),
                   IconButton(
-                    icon: const Icon(Icons.mail),
+                    icon: const Icon(Icons.sms),
                     color: Colors.red,
                     onPressed:()async{
-                      final _call = 'sms:$_phoneNumber'; 
+                      final _call = 'sms:$_url'; 
                       if (await canLaunch(_call)){
                         await launch (_call);
                       }
@@ -152,6 +152,9 @@ class LoginScreen extends StatelessWidget {
         ),
         onPressed: onClicked,
       );
+void _launchUrl() async{
+  if (!await launchUrl(Uri.parse(_url))) throw 'Could not launch $_url';
+}
 
 }
 
