@@ -6,7 +6,7 @@ import 'package:admissionproject/users/applicant/appli_home.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class LoginScreen extends StatelessWidget {
-  final String _url = '+639152135706';
+  final Uri _phoneNumber = Uri.parse('+639987654321');
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -26,6 +26,9 @@ class LoginScreen extends StatelessWidget {
               ),
               Column(
                 children: [
+                  const SizedBox(
+                    height: 10,
+                  ),
                   const TextInputField(
                     icon: FontAwesomeIcons.userLarge,
                     hint: 'User ID',
@@ -43,9 +46,6 @@ class LoginScreen extends StatelessWidget {
                   ),
                   const RoundedButton(
                     buttonName: 'Sign In',
-                  ),
-                  const SizedBox(
-                    height: 15,
                   ),
                   buildAuthenticate(context),
                   const SizedBox(
@@ -77,7 +77,7 @@ class LoginScreen extends StatelessWidget {
               ),
               const SizedBox(height: 15),
               const Text(
-                    "For Inquiries: Call or Text us",
+                    "For Inquiries:",
                     style: TextStyle(
                         fontSize: 15,
                         color: Color.fromARGB(199, 0, 0, 0),
@@ -89,9 +89,9 @@ class LoginScreen extends StatelessWidget {
                     icon: const Icon(Icons.phone),
                     color: Colors.red,
                     onPressed:()async{
-                      final _call = 'tel:$_url'; 
-                      if (await canLaunch(_call)){
-                        await launch (_call);
+                      final Uri _call = Uri.parse('tel:$_phoneNumber'); 
+                      if (await canLaunchUrl(_call)){
+                        await launchUrl(_call);
                       }
                     },
                   ),
@@ -102,9 +102,9 @@ class LoginScreen extends StatelessWidget {
                     icon: const Icon(Icons.sms),
                     color: Colors.red,
                     onPressed:()async{
-                      final _call = 'sms:$_url'; 
-                      if (await canLaunch(_call)){
-                        await launch (_call);
+                      final Uri _text = Uri.parse('sms:$_phoneNumber'); 
+                      if (await canLaunchUrl(_text)){
+                        await launchUrl(_text);
                       }
                     },
                   ),
@@ -152,9 +152,6 @@ class LoginScreen extends StatelessWidget {
         ),
         onPressed: onClicked,
       );
-void _launchUrl() async{
-  if (!await launchUrl(Uri.parse(_url))) throw 'Could not launch $_url';
-}
 
 }
 
