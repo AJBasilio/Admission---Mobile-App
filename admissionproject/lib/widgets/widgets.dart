@@ -1,4 +1,4 @@
-export 'password-input.dart';
-export 'text-field-input.dart';
-export 'rounded-button.dart';
-export 'background-image.dart';
+export 'password_input.dart';
+export 'text_field_input.dart';
+export 'rounded_button.dart';
+export 'background_image.dart';

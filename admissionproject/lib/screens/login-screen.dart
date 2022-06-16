@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import '../models/designs/pallete.dart';
+
 import '../widgets/widgets.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -23,25 +23,25 @@ class LoginScreen extends StatelessWidget {
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  const TextInputField(
+                children: const [
+                    TextInputField(
                     icon: FontAwesomeIcons.userLarge,
                     hint: 'User ID',
                     inputType: TextInputType.emailAddress,
                     inputAction: TextInputAction.next,
                   ),
-                  const PasswordInput(
+                  PasswordInput(
                     icon: FontAwesomeIcons.lock,
                     hint: 'Password',
                     inputAction: TextInputAction.done,
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 25,
                   ),
-                  const RoundedButton(
+                  RoundedButton(
                     buttonName: 'Sign In',
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 25,
                   ),
                 ],
@@ -49,18 +49,18 @@ class LoginScreen extends StatelessWidget {
               GestureDetector(
                 onTap: () => Navigator.pushNamed(context, 'CreateNewAccount'),
                 child:
-                    Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  const Text(
+                    Row(mainAxisAlignment: MainAxisAlignment.center, children: const [
+                  Text(
                     "Don't have an account yet?",
                     style: TextStyle(
                         fontSize: 15,
                         color: Color.fromARGB(199, 0, 0, 0),
                         height: 1.5),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     width: 10,
                   ),
-                  const Text(
+                  Text(
                     'Create New Account',
                     style: TextStyle(
                         fontSize: 15, color: Colors.blue, height: 1.5),

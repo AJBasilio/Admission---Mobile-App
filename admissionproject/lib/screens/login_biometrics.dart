@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import '../widgets/widgets.dart';
 import 'package:admissionproject/api/local_auth_api.dart';
 import 'package:admissionproject/users/applicant/appli_home.dart';
 import 'package:url_launcher/url_launcher.dart';
+import '../models/designs/pallete.dart';
+import 'package:admissionproject/screens/main_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   final Uri _phoneNumber = Uri.parse('+639987654321');
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Stack(
       children: [
         Scaffold(
@@ -29,23 +31,104 @@ class LoginScreen extends StatelessWidget {
                   const SizedBox(
                     height: 10,
                   ),
-                  const TextInputField(
-                    icon: FontAwesomeIcons.userLarge,
-                    hint: 'User ID',
-                    inputType: TextInputType.emailAddress,
-                    inputAction: TextInputAction.next,
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 10.0),
+                    child: Container(
+                      height: size.height * 0.08,
+                      width: size.width * 0.8,
+                      decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 255, 255, 255).withOpacity(0.5),
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      child: const Center(
+                        child: TextField(
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            prefixIcon: Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 20.0),
+                              child: Icon(
+                                FontAwesomeIcons.userLarge,
+                                size: 28,
+                                color: kWhite,
+                              ),
+                            ),
+                            hintText: 'User ID',
+                            hintStyle: TextStyle(
+                                fontSize: 22,
+                                color: Color.fromARGB(158, 0, 0, 0),
+                                height: 1.5),
+                          ),
+                          style: kBodyText,
+                          textInputAction: TextInputAction.next,
+                        ),
+                      ),
+                    ),
                   ),
-                  const PasswordInput(
-                    icon: FontAwesomeIcons.lock,
-                    hint: 'Password',
-                    inputAction: TextInputAction.done,
+                  // const PasswordInput(
+                  //   icon: FontAwesomeIcons.lock,
+                  //   hint: 'Password',
+                  //   inputAction: TextInputAction.done,
+                  // ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 10.0),
+                    child: Container(
+                      height: size.height * 0.08,
+                      width: size.width * 0.8,
+                      decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 255, 255, 255).withOpacity(0.5),
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      child: const Center(
+                        child: TextField(
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            prefixIcon: Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 20.0),
+                              child: Icon(
+                                FontAwesomeIcons.lock,
+                                size: 28,
+                                color: kWhite,
+                              ),
+                            ),
+                            hintText: 'Password',
+                            hintStyle: TextStyle(
+                                fontSize: 22,
+                                color: Color.fromARGB(158, 0, 0, 0),
+                                height: 1.5),
+                          ),
+                          obscureText: true,
+                          style: kBodyText,
+                          textInputAction: TextInputAction.done,
+                        ),
+                      ),
+                    ),
                   ),
-                  
                   const SizedBox(
                     height: 25,
                   ),
-                  const RoundedButton(
-                    buttonName: 'Sign In',
+                  // const RoundedButton(
+                  //   buttonName: 'Sign In',
+                  // ),
+                  Container(
+                    height: size.height * 0.08,
+                    width: size.width * 0.8,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16),
+                      color: const Color(0xFFEF3A25),
+                    ),
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context, MaterialPageRoute(builder: (context) => MainScreen()));
+                      },
+                      child: const Text(
+                        'Sign In',
+                        style: TextStyle(
+                            fontSize: 22,
+                            color: Color.fromARGB(255, 250, 250, 250),
+                            height: 1.5),
+                      ),
+                    ),
                   ),
                   buildAuthenticate(context),
                   const SizedBox(

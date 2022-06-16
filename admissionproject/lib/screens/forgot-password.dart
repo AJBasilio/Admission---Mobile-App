@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../models/designs/pallete.dart';
-import '../widgets/background-image.dart';
-import '../widgets/rounded-button.dart';
-import '../widgets/text-field-input.dart';
+import '../widgets/background_image.dart';
+import '../widgets/rounded_button.dart';
+import '../widgets/text_field_input.dart';
 
 class ForgotPassword extends StatelessWidget {
   @override
