@@ -5,12 +5,15 @@ import 'package:admissionproject/users/applicant/appli_home.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../models/designs/pallete.dart';
 import 'package:admissionproject/screens/main_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
 
 class LoginScreen extends StatelessWidget {
   final Uri _phoneNumber = Uri.parse('+639987654321');
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    final userController = TextEditingController();
     return Stack(
       children: [
         Scaffold(
@@ -40,9 +43,10 @@ class LoginScreen extends StatelessWidget {
                         color: const Color.fromARGB(255, 255, 255, 255).withOpacity(0.5),
                         borderRadius: BorderRadius.circular(16),
                       ),
-                      child: const Center(
+                      child: Center(
                         child: TextField(
-                          decoration: InputDecoration(
+                          controller: userController,
+                          decoration: const InputDecoration(
                             border: InputBorder.none,
                             prefixIcon: Padding(
                               padding: EdgeInsets.symmetric(horizontal: 20.0),
@@ -64,11 +68,6 @@ class LoginScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  // const PasswordInput(
-                  //   icon: FontAwesomeIcons.lock,
-                  //   hint: 'Password',
-                  //   inputAction: TextInputAction.done,
-                  // ),
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 10.0),
                     child: Container(
@@ -117,7 +116,9 @@ class LoginScreen extends StatelessWidget {
                       color: const Color(0xFFEF3A25),
                     ),
                     child: TextButton(
-                      onPressed: () {
+                      onPressed: () async {
+                        final SharedPreferences prefs = await SharedPreferences.getInstance();
+                        prefs.setString('userid', userController.text);
                         Navigator.push(
                             context, MaterialPageRoute(builder: (context) => MainScreen()));
                       },
