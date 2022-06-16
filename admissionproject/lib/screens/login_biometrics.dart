@@ -6,10 +6,16 @@ import 'package:url_launcher/url_launcher.dart';
 import '../models/designs/pallete.dart';
 import 'package:admissionproject/screens/main_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:get/get.dart';
 
+class LoginScreen extends StatefulWidget {
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
 
-class LoginScreen extends StatelessWidget {
+class _LoginScreenState extends State<LoginScreen> {
   final Uri _phoneNumber = Uri.parse('+639987654321');
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -119,8 +125,9 @@ class LoginScreen extends StatelessWidget {
                       onPressed: () async {
                         final SharedPreferences prefs = await SharedPreferences.getInstance();
                         prefs.setString('userid', userController.text);
-                        Navigator.push(
-                            context, MaterialPageRoute(builder: (context) => MainScreen()));
+                        Get.to(MainScreen());
+                        // Navigator.push(
+                        //     context, MaterialPageRoute(builder: (context) => MainScreen()));
                       },
                       child: const Text(
                         'Sign In',
@@ -201,6 +208,7 @@ class LoginScreen extends StatelessWidget {
       ]
     );
   }
+
   Widget buildAuthenticate(BuildContext context) => buildButton(
         text: '',
         icon: Icons.fingerprint_rounded,
@@ -214,7 +222,7 @@ class LoginScreen extends StatelessWidget {
           }
         },
       );
-  
+
   Widget buildButton({
     required String text,
     required IconData icon,
@@ -236,6 +244,5 @@ class LoginScreen extends StatelessWidget {
         ),
         onPressed: onClicked,
       );
-
 }
 
