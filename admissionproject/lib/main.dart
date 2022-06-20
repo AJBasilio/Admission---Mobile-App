@@ -7,12 +7,25 @@ import 'package:admissionproject/screens/welcome_back.dart';
 import 'package:admissionproject/screens/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-void main() {
-  runApp(MyApp());
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  var email = prefs.getString('userid');
+  print(email);
+  runApp(MaterialApp(home: email == null ? LoginScreen() : WelcomeScreen(),
+                    
+                    debugShowCheckedModeBanner: false,
+                    title: 'Admission App',));
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {

@@ -15,11 +15,12 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   final Uri _phoneNumber = Uri.parse('+639987654321');
+  final userController = TextEditingController();
   
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    final userController = TextEditingController();
+    
     return Stack(
       children: [
         Scaffold(
@@ -125,9 +126,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       onPressed: () async {
                         final SharedPreferences prefs = await SharedPreferences.getInstance();
                         prefs.setString('userid', userController.text);
-                        Get.to(MainScreen());
-                        // Navigator.push(
-                        //     context, MaterialPageRoute(builder: (context) => MainScreen()));
+                        // Get.to(MainScreen());
+                        Navigator.push(
+                            context, MaterialPageRoute(builder: (context) => MainScreen()));
                       },
                       child: const Text(
                         'Sign In',
