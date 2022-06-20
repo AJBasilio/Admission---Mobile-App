@@ -15,7 +15,7 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   final Uri _phoneNumber = Uri.parse('+639987654321');
-
+  
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
