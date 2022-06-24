@@ -1,10 +1,10 @@
 import 'package:admissionproject/main.dart';
 import 'package:admissionproject/screens/dashboard/components/OverallDetails.dart';
 import 'package:admissionproject/screens/dashboard/components/my_fields.dart';
-import 'package:admissionproject/screens/login-screen.dart';
+import 'package:admissionproject/screens/login_biometrics.dart';
 import 'package:flutter/material.dart';
-
 import 'package:admissionproject/models/designs/constants.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,23 +23,24 @@ class _AdminHomeState extends State<AdminHome> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text(
+        title: const Text(
           'Admin Dashboard',
           style: TextStyle(color: Colors.white),
         ),
         actions: [
           IconButton(
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => LoginScreen()));
+            onPressed: () async {
+              SharedPreferences prefs = await SharedPreferences.getInstance();
+              prefs.clear();
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext ctx) => LoginScreen()));
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.logout,
               color: Colors.white,
             ),
           ),
         ],
-        backgroundColor: Color.fromARGB(255, 195, 29, 57),
+        backgroundColor: const Color.fromARGB(255, 195, 29, 57),
         elevation: 0,
       ),
       body: SingleChildScrollView(
