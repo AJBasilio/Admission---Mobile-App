@@ -12,10 +12,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   SharedPreferences prefs = await SharedPreferences.getInstance();
-  var email = prefs.getString('userid');
-  print(email);
-  runApp(MaterialApp(home: email == null ? LoginScreen() : WelcomeScreen(),
-                    
+  var userid = prefs.getString('userid');
+  print(userid);
+  runApp(MaterialApp(home: userid == null ? LoginScreen() : WelcomeScreen(),                
                     debugShowCheckedModeBanner: false,
                     title: 'Admission App',));
 }
