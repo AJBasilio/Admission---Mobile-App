@@ -36,115 +36,30 @@ class _AppliHomeState extends State<AppliHome> {
               MedicalStatus(),
               AppliStatus(),
               Padding(
-                padding: const EdgeInsets.fromLTRB(0, 10, 0, 5),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(18),
-                                  ),
-                                primary: const Color(0xffEF3A25),
-                                padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 15.0)
+                padding: const EdgeInsets.all(8.0),
+                child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.white70,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(18),
                               ),
-                              onPressed: () {
-                                Navigator.push(context, MaterialPageRoute(builder: (BuildContext ctx) => const AppliUpload()));
-                              }, 
-                              child: const Text('Upload Media', style: TextStyle(
-                                fontSize: 16,
-                                fontFamily: 'Lato',
-                                fontWeight: FontWeight.bold,
-                                  ),
+                              onPrimary: const Color(0xffEF3A25),
+                              padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 15.0)
+                            ),
+                            onPressed: () async {
+                              SharedPreferences prefs = await SharedPreferences.getInstance();
+                              prefs.clear();
+                              Navigator.pushReplacement(context,
+                                  MaterialPageRoute(builder: (BuildContext ctx) => LoginScreen()));
+                            }, 
+                            child: const Text('Log Out', style: TextStyle(
+                                  fontSize: 16,
+                                  fontFamily: 'Lato',
+                                  fontWeight: FontWeight.bold,
                                 ),
                               ),
-                    ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(18),
-                                  ),
-                                primary: const Color(0xffEF3A25),
-                                padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 15.0)
-                              ),
-                              onPressed: () {
-                                Navigator.push(context, MaterialPageRoute(builder: (BuildContext ctx) => const AppliResults()));
-                              }, 
-                              child: const Text('View Result', style: TextStyle(
-                                fontSize: 16,
-                                fontFamily: 'Lato',
-                                fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(0, 5, 0, 10),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    ElevatedButton(
-                                    style: ElevatedButton.styleFrom(
-                                      shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(18),
-                                        ),
-                                      primary: const Color(0xffEF3A25),
-                                      padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 15.0)
-                                    ),
-                                    onPressed: () {
-                                      Navigator.push(context, MaterialPageRoute(builder: (BuildContext ctx) => const AppliPdf()));
-                                    }, 
-                                    child: const Text('View PDF', style: TextStyle(
-                                      fontSize: 16,
-                                      fontFamily: 'Lato',
-                                      fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                    ),
-                          ElevatedButton(
-                                    style: ElevatedButton.styleFrom(
-                                      shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(18),
-                                        ),
-                                      primary: const Color(0xffEF3A25),
-                                      padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 15.0)
-                                    ),
-                                    onPressed: () {
-                                      Navigator.push(context, MaterialPageRoute(builder: (BuildContext ctx) => const ChatPage()));
-                                    }, 
-                                    child: const Text('Message', style: TextStyle(
-                                      fontSize: 16,
-                                      fontFamily: 'Lato',
-                                      fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                    ),
-                  ],
-                ),
-              ),
-              ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            primary: Colors.white70,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(18),
                             ),
-                            onPrimary: const Color(0xffEF3A25),
-                            padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 15.0)
-                          ),
-                          onPressed: () async {
-                            SharedPreferences prefs = await SharedPreferences.getInstance();
-                            prefs.clear();
-                            Navigator.pushReplacement(context,
-                                MaterialPageRoute(builder: (BuildContext ctx) => LoginScreen()));
-                          }, 
-                          child: const Text('Log Out', style: TextStyle(
-                                fontSize: 16,
-                                fontFamily: 'Lato',
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
+              ),
             ])),
       );
 

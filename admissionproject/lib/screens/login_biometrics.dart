@@ -6,6 +6,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../models/designs/pallete.dart';
 import 'package:admissionproject/screens/main_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:admissionproject/widgets/appli_bottomnav.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -126,7 +127,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         final SharedPreferences prefs = await SharedPreferences.getInstance();
                         prefs.setString('userid', userController.text);
                         Navigator.push(
-                            context, MaterialPageRoute(builder: (context) => const AppliHome()));
+                            context, MaterialPageRoute(builder: (context) => const AppliButtonNav()));
                       },
                       child: const Text(
                         'Sign In',
