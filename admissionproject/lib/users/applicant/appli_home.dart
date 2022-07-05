@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:admissionproject/users/applicant/appli_upload.dart';
-import 'package:admissionproject/users/applicant/appli_results.dart';
-import 'package:admissionproject/users/applicant/appli_pdf.dart';
-import 'package:admissionproject/users/applicant/appli_chatpage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:admissionproject/screens/login_biometrics.dart';
 void main() {
