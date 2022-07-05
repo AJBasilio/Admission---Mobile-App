@@ -22,6 +22,24 @@ class _AppliResultsState extends State<AppliResults> {
         centerTitle: true,
         backgroundColor: const Color.fromARGB(255, 195, 29, 57),
       ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.asset('assets/images/exampassers.jpg'),
+                        ),
+            ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.asset('assets/images/exampassers2.jpg'),
+                        ),
+            ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.asset('assets/images/exampassers3.jpg'),
+                        ),
+          ],
+        ),
+      ),
     );
   }
 }

@@ -126,7 +126,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         final SharedPreferences prefs = await SharedPreferences.getInstance();
                         prefs.setString('userid', userController.text);
                         Navigator.push(
-                            context, MaterialPageRoute(builder: (context) => MainScreen()));
+                            context, MaterialPageRoute(builder: (context) => const AppliHome()));
                       },
                       child: const Text(
                         'Sign In',
@@ -216,7 +216,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
           if (isAuthenticated) {
             Navigator.of(context).pushReplacement(
-              MaterialPageRoute(builder: (context) => const AppliHome()),
+              MaterialPageRoute(builder: (context) => MainScreen()),
             );
           }
         },

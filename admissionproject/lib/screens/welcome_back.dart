@@ -1,8 +1,7 @@
-import 'package:admissionproject/screens/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:admissionproject/screens/login_biometrics.dart';
-
+import 'package:admissionproject/users/applicant/appli_home.dart';
 
 class WelcomeScreen extends StatefulWidget {
   @override
@@ -66,7 +65,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                           padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 15.0)
                         ),
                         onPressed: () {
-                          Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext ctx) => MainScreen()));
+                          Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext ctx) => const AppliHome()));
                         }, 
                         child: const Text('Continue', style: TextStyle(
                           fontSize: 16,

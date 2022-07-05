@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
-
+import 'package:admissionproject/users/applicant/appli_upload.dart';
+import 'package:admissionproject/users/applicant/appli_results.dart';
+import 'package:admissionproject/users/applicant/appli_pdf.dart';
+import 'package:admissionproject/users/applicant/appli_chatpage.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:admissionproject/screens/login_biometrics.dart';
 void main() {
   runApp(const MaterialApp(
     home: AppliHome(),
@@ -17,6 +22,7 @@ class _AppliHomeState extends State<AppliHome> {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           title: const Text('Applicant Dashboard'),
           centerTitle: true,
           backgroundColor: const Color.fromARGB(255, 195, 29, 57),
@@ -29,6 +35,116 @@ class _AppliHomeState extends State<AppliHome> {
               InterStatus(),
               MedicalStatus(),
               AppliStatus(),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 10, 0, 5),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(18),
+                                  ),
+                                primary: const Color(0xffEF3A25),
+                                padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 15.0)
+                              ),
+                              onPressed: () {
+                                Navigator.push(context, MaterialPageRoute(builder: (BuildContext ctx) => const AppliUpload()));
+                              }, 
+                              child: const Text('Upload Media', style: TextStyle(
+                                fontSize: 16,
+                                fontFamily: 'Lato',
+                                fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                    ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(18),
+                                  ),
+                                primary: const Color(0xffEF3A25),
+                                padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 15.0)
+                              ),
+                              onPressed: () {
+                                Navigator.push(context, MaterialPageRoute(builder: (BuildContext ctx) => const AppliResults()));
+                              }, 
+                              child: const Text('View Result', style: TextStyle(
+                                fontSize: 16,
+                                fontFamily: 'Lato',
+                                fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 5, 0, 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(18),
+                                        ),
+                                      primary: const Color(0xffEF3A25),
+                                      padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 15.0)
+                                    ),
+                                    onPressed: () {
+                                      Navigator.push(context, MaterialPageRoute(builder: (BuildContext ctx) => const AppliPdf()));
+                                    }, 
+                                    child: const Text('View PDF', style: TextStyle(
+                                      fontSize: 16,
+                                      fontFamily: 'Lato',
+                                      fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ),
+                          ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(18),
+                                        ),
+                                      primary: const Color(0xffEF3A25),
+                                      padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 15.0)
+                                    ),
+                                    onPressed: () {
+                                      Navigator.push(context, MaterialPageRoute(builder: (BuildContext ctx) => const ChatPage()));
+                                    }, 
+                                    child: const Text('Message', style: TextStyle(
+                                      fontSize: 16,
+                                      fontFamily: 'Lato',
+                                      fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ),
+                  ],
+                ),
+              ),
+              ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.white70,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(18),
+                            ),
+                            onPrimary: const Color(0xffEF3A25),
+                            padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 15.0)
+                          ),
+                          onPressed: () async {
+                            SharedPreferences prefs = await SharedPreferences.getInstance();
+                            prefs.clear();
+                            Navigator.pushReplacement(context,
+                                MaterialPageRoute(builder: (BuildContext ctx) => LoginScreen()));
+                          }, 
+                          child: const Text('Log Out', style: TextStyle(
+                                fontSize: 16,
+                                fontFamily: 'Lato',
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
             ])),
       );
 
@@ -44,13 +160,13 @@ class _AppliHomeState extends State<AppliHome> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              ListTile(
-                leading: const Icon(
+              const ListTile(
+                leading: Icon(
                   Icons.account_circle,
                   color: Color(0xFFEF3A25),
                   size: 50,
                 ),
-                title: const Text(
+                title: Text(
                   "Applicant's Information",
                   style: TextStyle(
                     color: Colors.black,

@@ -5,10 +5,10 @@ import 'package:admissionproject/users/applicant/appli_results.dart';
 import 'package:admissionproject/users/applicant/appli_upload.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(const AppliButtonNav());
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class AppliButtonNav extends StatelessWidget {
+  const AppliButtonNav({Key? key}) : super(key: key);
 
   static const String _title = 'Flutter Code Sample';
 
