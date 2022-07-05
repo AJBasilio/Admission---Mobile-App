@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:admissionproject/api/local_auth_api.dart';
-import 'package:admissionproject/users/applicant/appli_home.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../models/designs/pallete.dart';
 import 'package:admissionproject/screens/main_screen.dart';
